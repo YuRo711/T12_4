@@ -52,12 +52,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\LaptopExitButton.cs" />
      <Compile Include="Assets\Scripts\Laptop.cs" />
      <Compile Include="Assets\Scripts\Notebook.cs" />
      <Compile Include="Assets\Scripts\ObjectActivation.cs" />
      <Compile Include="Assets\Scripts\Catalogue.cs" />
-     <Compile Include="Assets\Scripts\Pause.cs" />
  <Reference Include="UnityEngine">
  <HintPath>F:/Unity/2020.3.32f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
