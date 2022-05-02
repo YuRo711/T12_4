@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Game
 {
-	partial class GameState
+	public static class GameState
 	{
-		public GameState(int money = 100)
+		private static bool exists;
+		public static void Restart(int money = 100)
         {
 			Money = money;
 			Day = 1;
@@ -18,25 +20,85 @@ namespace Game
 			SetGameObjects();
 			CurrentCustomerOrder = CustomerOrdersToday[0];
         }
-
-		public int Money { get; set; }
-		public int Day { get; set; }
-		public int Time { get; set; }
-		public CustomerOrder CurrentCustomerOrder { get; set; }
-		public Customer CurrentCustomer 
-		{ get
-			{
-				return CurrentCustomerOrder.Customer;
-			} 
+		
+		public static int Money { get; set; }
+		public static int Day { get; set; }
+		public static int Time { get; set; }
+		public static CustomerOrder CurrentCustomerOrder { get; set; }
+		public static Customer CurrentCustomer 
+		{ get { return CurrentCustomerOrder.Customer; } 
 		}
-		public int ServedClientsToday { get; set; }
-		public int ServedClientsTotal { get; set; }
-		public List<CustomerOrder> CustomerOrdersToday { get; set; }
-		public List<Place> Places { get; set; }
-		public List<Container> Containers { get; set; }
-		public List<Attribute> Gravestones { get; set; }
-		public List<Attribute> Wreaths { get; set; }
-		public List<Attribute> Services { get; set; }
-		public List<Customer> Customers { get; set; }
+		public static int ServedClientsToday { get; set; }
+		public static int ServedClientsTotal { get; set; }
+		public static List<CustomerOrder> CustomerOrdersToday { get; set; }
+		public static List<Place> Places { get; set; }
+		public static List<Container> Containers { get; set; }
+		public static List<Attribute> Gravestones { get; set; }
+		public static List<Attribute> Wreaths { get; set; }
+		public static List<Attribute> Services { get; set; }
+		public static List<Customer> Customers { get; set; }
+		
+		
+		private static void SetGameObjects()
+                {
+                    //Places = (List<Place>)GetPlaces();
+                    Containers = GetContainers();
+                    /*
+                     Gravestones = (List<Attribute>)GetGravestones();
+                    Wreaths = (List<Attribute>)GetWreaths();
+                    Services = (List<Attribute>)GetServices();
+                    Customers = (List<Customer>)GetCustomers();
+                    CustomerOrdersToday = (List<CustomerOrder>)GetOrders(Day);
+                    */
+                }
+        
+                //Add objects here
+                private static IEnumerable<Customer> GetCustomers()
+                {
+                    yield break;
+                }
+        
+                private static IEnumerable<CustomerOrder> GetOrders(int day)
+                {
+                    switch (day)
+                    {
+                        case 0:
+                            yield return new CustomerOrder(Customers[0]);
+                            break;
+                    }
+                    yield break;
+                }
+        
+                private static IEnumerable<Place> GetPlaces()
+                {
+                    yield break;
+                }
+        
+                private static List<Container> GetContainers()
+                {
+	                return new List<Container>
+	                {
+		                new Container(
+			                ContainerTypes.Coffin,
+			                "Sprites/coffin_1",
+			                "Nike",
+			                30)
+	                };
+                }
+        
+                private static IEnumerable<Attribute> GetGravestones()
+                {
+                    yield break;
+                }
+        
+                private static IEnumerable<Attribute> GetWreaths()
+                {
+                    yield break;
+                }
+        
+                private static IEnumerable<Attribute> GetServices()
+                {
+                    yield break;
+                }
 	}
 }
