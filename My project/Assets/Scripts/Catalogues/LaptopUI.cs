@@ -46,7 +46,7 @@ namespace Game
                 GUI.Label(textArea, container.Price.ToString() + "$", laptopStyle);
                 
                 var button = buttons[i];
-                button.GetComponent<ShopButton>().Container = container;
+                button.GetComponent<ContainerShopButton>().Container = container;
 
                 y += 250;
             }

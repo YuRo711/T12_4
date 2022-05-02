@@ -24,7 +24,7 @@ namespace Game
         private void OnGUI()
         {
             var y = 140;
-            foreach (var task in ClickableText.tasks)
+            foreach (var task in GameState.Tasks)
             {
                 var textArea = new Rect(400, y, 300, 100);
                 GUI.Label(textArea, task, style);

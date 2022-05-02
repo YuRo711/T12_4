@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -18,7 +19,14 @@ namespace Game
             money = GameState.Money;
             DontDestroyOnLoad(this);
             if (!exists)
+            {
                 exists = true;
+                GameState.Restart();
+                if (SceneManager.GetActiveScene().name == "menu")
+                    gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                else
+                    gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            }
             else
                 Destroy(gameObject);
         }
@@ -29,6 +37,12 @@ namespace Game
             money = GameState.Money;
             var textArea = new Rect(230,358, 300, 100);
             GUI.Label(textArea, money.ToString(), style);
+        }
+
+        public void Buy(int price)
+        {
+            if (GameState.Money >= price)
+                GameState.Money -= price;
         }
     }
 }

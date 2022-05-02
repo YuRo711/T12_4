@@ -10,6 +10,8 @@ namespace Game
 	public static class GameState
 	{
 		private static bool exists;
+		
+		// Создаётся в MoneyUI
 		public static void Restart(int money = 100)
         {
 			Money = money;
@@ -18,25 +20,29 @@ namespace Game
 			ServedClientsToday = 0;
 			ServedClientsTotal = 0;
 			SetGameObjects();
-			CurrentCustomerOrder = CustomerOrdersToday[0];
+			CustomersToday = new List<Customer> { new Customer("a", "Abigaile") };
+			Tasks = new List<string>();
+			CurrentCustomer = CustomersToday[0];
         }
 		
 		public static int Money { get; set; }
 		public static int Day { get; set; }
 		public static int Time { get; set; }
-		public static CustomerOrder CurrentCustomerOrder { get; set; }
-		public static Customer CurrentCustomer 
-		{ get { return CurrentCustomerOrder.Customer; } 
-		}
+		public static Customer CurrentCustomer { get; set; }
 		public static int ServedClientsToday { get; set; }
 		public static int ServedClientsTotal { get; set; }
-		public static List<CustomerOrder> CustomerOrdersToday { get; set; }
+		public static List<Customer> CustomersToday { get; set; }
 		public static List<Place> Places { get; set; }
 		public static List<Container> Containers { get; set; }
 		public static List<Attribute> Gravestones { get; set; }
 		public static List<Attribute> Wreaths { get; set; }
 		public static List<Attribute> Services { get; set; }
 		public static List<Customer> Customers { get; set; }
+		public static List<string> DialogueQueue { get; set; } = new List<string>();
+
+		public static List<string> Tasks { get; set; }
+
+		public static bool Paused { get; set; }
 		
 		
 		private static void SetGameObjects()
