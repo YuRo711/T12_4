@@ -40,12 +40,10 @@ namespace Game
                 contName.GetComponent<Text>().text = container.Name;
                 contName.transform.position = new Vector3(0, y, 0);
                 
-                var price = (GameObject)Instantiate(Resources.Load("ShopText"), canvas.transform);
-                price.GetComponent<Text>().text = container.Price + "$";
-                price.transform.position = new Vector3(3, y, 0);
-                
                 var button = (GameObject)Instantiate(Resources.Load("ShopButton"), canvas.transform);
                 button.GetComponent<ShopButton>().Preference = container;
+                button.GetComponentInChildren<Text>().text = container.Price + "$";
+                button.GetComponentInChildren<Text>().text = container.Price + "$";
                 button.transform.position = new Vector3(5, y, 0);
 
                 y -= 3;

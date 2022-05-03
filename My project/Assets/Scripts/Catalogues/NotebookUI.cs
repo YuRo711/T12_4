@@ -19,16 +19,19 @@ namespace Game
             style = GUIStyle.none;
             style.fontSize = 50;
             style.normal.textColor = Color.black;
+            UpdateTasks();
         }
 
-        private void OnGUI()
+        private void UpdateTasks()
         {
-            var y = 140;
+            var y = 3.3f;
+            var canvas = GameObject.Find("Canvas");
             foreach (var task in GameState.Tasks)
             {
-                var textArea = new Rect(400, y, 300, 100);
-                GUI.Label(textArea, task, style);
-                y += 80;
+                var line = (GameObject)Instantiate(Resources.Load("NotebookText"), canvas.transform);
+                line.GetComponent<TMP_Text>().text = task;
+                line.transform.position = new Vector3(-0.3f, y, 0);
+                y += 0.9f;
             }
         }
     }

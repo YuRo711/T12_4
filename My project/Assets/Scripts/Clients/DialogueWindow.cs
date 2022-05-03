@@ -14,7 +14,7 @@ class DialogueWindow : MonoBehaviour
     public List<string> dialogueQueue;
     private GameObject canvas;
     private string currentText;
-    private float wordPause = 1f;
+    private float wordPause = 0.7f;
 
     private void Start()
     {

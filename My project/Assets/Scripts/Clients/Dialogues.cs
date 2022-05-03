@@ -9,7 +9,7 @@ namespace Clients
             {
                 { "Abigaile", new Dictionary<DialogueState, string[]>
                     {
-                        { DialogueState.Order, new[] { "Здравствуйте", "Меня зовут <link=Абигейл>Абигейл</link>", "!" } },
+                        { DialogueState.Order, new[] { "<link=Здравствуйте>Здравствуйте</link>", "Меня зовут <link=Абигейл>Абигейл</link>", "!" } },
                         { DialogueState.Fail, new[] { "Здравствуйте", "Меня зовут <link=Абигейл>Абигейл</link>" } },
                         { DialogueState.Success, new[] { "Здравствуйте", "Меня зовут <link=Абигейл>Абигейл</link>" } }
                 
