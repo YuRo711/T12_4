@@ -38,11 +38,5 @@ namespace Game
             var textArea = new Rect(230,358, 300, 100);
             GUI.Label(textArea, money.ToString(), style);
         }
-
-        public void Buy(int price)
-        {
-            if (GameState.Money >= price)
-                GameState.Money -= price;
-        }
     }
 }

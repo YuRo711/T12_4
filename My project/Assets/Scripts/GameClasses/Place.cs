@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 namespace Game
-{	public class Place
+{	public class Place : IPreference
 	{
 		public Place(PlaceTypes type, string image = null, string name = "Unnamed")
         {
@@ -19,7 +19,8 @@ namespace Game
 		public int Id { get; set; }
 		public PlaceTypes Type { get; set; }
 		public string Name { get; set; }
-		public string Image;
+		public string Image { get; set; }
+		public int Price { get; set; }
 		private static int Count = 0;
 		//Add default image
 		public static string DefaultImage = null;

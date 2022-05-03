@@ -8,19 +8,9 @@ public class ObjectActivation : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite activeSprite;
     public Sprite idleSprite;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool activated;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnMouseEnter()
+    private void OnMouseOver()
     {
         spriteRenderer.sprite = activeSprite;
     }

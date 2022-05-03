@@ -23,6 +23,7 @@ namespace Game
 			CustomersToday = new List<Customer> { new Customer("a", "Abigaile") };
 			Tasks = new List<string>();
 			CurrentCustomer = CustomersToday[0];
+			CurrentOrder = new List<IPreference>();
         }
 		
 		public static int Money { get; set; }
@@ -37,6 +38,8 @@ namespace Game
 		public static List<Attribute> Gravestones { get; set; }
 		public static List<Attribute> Wreaths { get; set; }
 		public static List<Attribute> Services { get; set; }
+		
+		public static List<IPreference> CurrentOrder { get; set; }
 		public static List<Customer> Customers { get; set; }
 		public static List<string> DialogueQueue { get; set; } = new List<string>();
 
@@ -88,7 +91,13 @@ namespace Game
 			                ContainerTypes.Coffin,
 			                "Sprites/coffin_1",
 			                "Nike",
-			                30)
+			                30),
+		                
+		                new Container(
+			                ContainerTypes.Coffin,
+			                "Sprites/coffin_2",
+			                "Glamour",
+			                40)
 	                };
                 }
         

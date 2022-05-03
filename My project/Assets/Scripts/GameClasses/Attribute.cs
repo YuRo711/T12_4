@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-	public class Attribute
+	public class Attribute : IPreference
 	{
 		public Attribute(AttributeTypes type, string image = null, string name = "Unnamed", int price = 20)
         {

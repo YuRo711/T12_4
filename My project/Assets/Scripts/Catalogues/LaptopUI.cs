@@ -12,22 +12,17 @@ namespace Game
 {
     public class LaptopUI : MonoBehaviour
     {
-        private GUIStyle laptopStyle;
-
         private void Start()
         {
-            laptopStyle = GUIStyle.none;
-            laptopStyle.fontSize = 40;
-            laptopStyle.normal.textColor = Color.black;
+            PageUpdate(0);
         }
 
-        private void OnGUI()
+        private void PageUpdate(int page)
         {
             var containers = GameState.Containers;
-            var y = 0;
-            var buttons = new List<GameObject> { GameObject.Find("Shop Button") };
-            var page = 0;
-            for (var i = page * 3; i < page * 3 + 1; i++)
+            var y = 4;
+            var canvas = GameObject.Find("Canvas");
+            for (var i = page * 3; i < Math.Min(page * 3 + 3, containers.Count); i++)
             {
                 var container = containers[i];
                 if (container.Type != ContainerTypes.Coffin)
@@ -35,20 +30,25 @@ namespace Game
                 
                 var sprite = Resources.Load<Sprite>(container.Image);
                 if (sprite != null)
-                    GUI.DrawTexture(new Rect(200, y, 100, 100), sprite.texture);
-                else
-                    Debug.Log("!");
-                
-                var textArea = new Rect(350, y + 40, 150, 100);
-                GUI.Label(textArea, container.Name, laptopStyle);
-                
-                textArea = new Rect(480, y + 40, 200, 100);
-                GUI.Label(textArea, container.Price.ToString() + "$", laptopStyle);
-                
-                var button = buttons[i];
-                button.GetComponent<ContainerShopButton>().Container = container;
+                {
+                    var image = (GameObject)Instantiate(Resources.Load("ShopImage"), canvas.transform);
+                    image.GetComponent<Image>().sprite = sprite;
+                    image.transform.position = new Vector3(-5.8f, y, 0);
+                }
 
-                y += 250;
+                var contName = (GameObject)Instantiate(Resources.Load("ShopText"), canvas.transform);
+                contName.GetComponent<Text>().text = container.Name;
+                contName.transform.position = new Vector3(0, y, 0);
+                
+                var price = (GameObject)Instantiate(Resources.Load("ShopText"), canvas.transform);
+                price.GetComponent<Text>().text = container.Price + "$";
+                price.transform.position = new Vector3(3, y, 0);
+                
+                var button = (GameObject)Instantiate(Resources.Load("ShopButton"), canvas.transform);
+                button.GetComponent<ShopButton>().Preference = container;
+                button.transform.position = new Vector3(5, y, 0);
+
+                y -= 3;
             }
         }
     }

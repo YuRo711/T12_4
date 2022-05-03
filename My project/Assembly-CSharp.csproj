@@ -55,8 +55,8 @@
      <Compile Include="Assets\Scripts\Catalogues\NotebookUI.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Customer.cs" />
      <Compile Include="Assets\Scripts\UI\Pause.cs" />
-     <Compile Include="Assets\Scripts\Catalogues\ContainerShopButton.cs" />
-     <Compile Include="Assets\Scripts\UI\LaptopExitButton.cs" />
+     <Compile Include="Assets\Scripts\Catalogues\ShopButton.cs" />
+     <Compile Include="Assets\Scripts\UI\ToMainButton.cs" />
      <Compile Include="Assets\Scripts\Clients\ClickableText.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\UI\Laptop.cs" />
@@ -75,6 +75,8 @@
      <Compile Include="Assets\Scripts\GameClasses\GameState.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Container.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Place.cs" />
+     <Compile Include="Assets\Scripts\GameClasses\IPreference.cs" />
+     <Compile Include="Assets\Scripts\Catalogues\CatalogueUI.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

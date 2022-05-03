@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-	public class Container
+	public class Container : IPreference
 	{
 		public Container(ContainerTypes type, string image = null, string name = "Unnamed", int price = 50, 
 			ContainerStyles style = ContainerStyles.Classic, ContainerPalette palette = ContainerPalette.Color )

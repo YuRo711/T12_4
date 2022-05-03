@@ -17,6 +17,7 @@ public class Pause : MonoBehaviour
     
     private void OnMouseDown()
     {
+        gameObject.SetActive(false);
         SceneManager.LoadScene("menu");
     }
 }
