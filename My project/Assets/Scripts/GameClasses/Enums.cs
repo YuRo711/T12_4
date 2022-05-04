@@ -6,18 +6,6 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-	public enum FuneralMethods
-	{
-		Bury,
-		Cremation
-	}
-
-	public enum PlaceTypes
-	{
-		Cementery,
-		Crematory
-	}
-
 	public enum ContainerTypes
 	{
 		Coffin,

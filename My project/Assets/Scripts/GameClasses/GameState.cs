@@ -54,14 +54,13 @@ namespace Game
 		
 		private static void SetGameObjects()
                 {
-                    //Places = (List<Place>)GetPlaces();
                     Containers = GetContainers();
                     Gravestones = GetGravestones();
                     Wreaths = GetWreaths();
                     /*
-                    Services = (List<Attribute>)GetServices();
-                    Customers = (List<Customer>)GetCustomers();
-                    CustomerOrdersToday = (List<CustomerOrder>)GetOrders(Day);
+                    Services = GetServices();
+                    Customers = GetCustomers();
+                    CustomerOrdersToday = GetOrders(Day);
                     */
                 }
         
@@ -79,11 +78,6 @@ namespace Game
                             yield return new CustomerOrder(Customers[0]);
                             break;
                     }
-                    yield break;
-                }
-        
-                private static IEnumerable<Place> GetPlaces()
-                {
                     yield break;
                 }
         
