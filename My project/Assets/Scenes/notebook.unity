@@ -324,7 +324,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.28627452, g: 0.16862746, b: 0.30980393, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -415,7 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ff86bea4cc8744e98b6b0255924238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1847323219}
   activeSprite: {fileID: 21300000, guid: ab09b930effe5064da5159478785584f, type: 3}
   idleSprite: {fileID: 21300000, guid: 10a366f1ac9585442abdd9f2cff0bb2e, type: 3}
 --- !u!212 &1847323219

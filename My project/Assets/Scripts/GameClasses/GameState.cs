@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -24,6 +25,7 @@ namespace Game
 			Tasks = new List<string>();
 			CurrentCustomer = CustomersToday[0];
 			CurrentOrder = new List<IPreference>();
+			LastScene = "main";
         }
 		
 		public static int Money { get; set; }
@@ -38,6 +40,8 @@ namespace Game
 		public static List<Attribute> Gravestones { get; set; }
 		public static List<Attribute> Wreaths { get; set; }
 		public static List<Attribute> Services { get; set; }
+
+		public static string LastScene;
 		
 		public static List<IPreference> CurrentOrder { get; set; }
 		public static List<Customer> Customers { get; set; }
@@ -52,9 +56,9 @@ namespace Game
                 {
                     //Places = (List<Place>)GetPlaces();
                     Containers = GetContainers();
+                    Gravestones = GetGravestones();
+                    Wreaths = GetWreaths();
                     /*
-                     Gravestones = (List<Attribute>)GetGravestones();
-                    Wreaths = (List<Attribute>)GetWreaths();
                     Services = (List<Attribute>)GetServices();
                     Customers = (List<Customer>)GetCustomers();
                     CustomerOrdersToday = (List<CustomerOrder>)GetOrders(Day);
@@ -90,25 +94,47 @@ namespace Game
 		                new Container(
 			                ContainerTypes.Coffin,
 			                "Sprites/coffin_1",
-			                "Nike",
+			                "Спортивный",
 			                30),
 		                
 		                new Container(
 			                ContainerTypes.Coffin,
 			                "Sprites/coffin_2",
-			                "Glamour",
-			                40)
+			                "Гламур",
+			                40),
+		                new Container(
+			                ContainerTypes.Coffin,
+			                "Sprites/coffin_3",
+			                "BBQ",
+			                45)
 	                };
                 }
         
-                private static IEnumerable<Attribute> GetGravestones()
+                private static List<Attribute> GetGravestones()
                 {
-                    yield break;
+	                return new List<Attribute>
+	                {
+		                new Attribute(
+			                AttributeTypes.Gravestone,
+			                "Sprites/stone_1",
+			                "Кельтский крест",
+			                50),
+		                new Attribute(
+			                AttributeTypes.Gravestone,
+			                "Sprites/stone_2",
+			                "Готика",
+			                40),
+		                new Attribute(
+			                AttributeTypes.Gravestone,
+			                "Sprites/stone_3",
+			                "Классика",
+			                30)
+	                };
                 }
         
-                private static IEnumerable<Attribute> GetWreaths()
+                private static List<Attribute> GetWreaths()
                 {
-                    yield break;
+	                return new List<Attribute>();
                 }
         
                 private static IEnumerable<Attribute> GetServices()

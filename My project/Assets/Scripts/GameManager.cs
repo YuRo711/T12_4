@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         StateObject = GameObject.FindWithTag("GameState");
-        Debug.Log(StateObject.gameObject.name);
     }
  
 }

@@ -11,7 +11,8 @@ namespace Game
         {
             var ui = GameObject.Find("Laptop UI").GetComponent<LaptopUI>();
             ui.category = type;
-            ui.PageUpdate(0);
+            ui.page = 0;
+            ui.PageUpdate();
         }
     }
 }

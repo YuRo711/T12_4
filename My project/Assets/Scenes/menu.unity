@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ff86bea4cc8744e98b6b0255924238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 64833069}
   activeSprite: {fileID: 21300000, guid: fcd5658bfeb97684ebd2edc6b3222c1b, type: 3}
   idleSprite: {fileID: 21300000, guid: 0be3dc6d733bbd6439dbf61b740eeaa3, type: 3}
 --- !u!212 &64833069
@@ -295,7 +294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ff86bea4cc8744e98b6b0255924238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 671954650}
   activeSprite: {fileID: 21300000, guid: 7225543e63dce6e4b8669e0f69dac474, type: 3}
   idleSprite: {fileID: 21300000, guid: ad7577d4568c4d040ba2efaf3182d0d9, type: 3}
 --- !u!212 &671954650
@@ -428,7 +426,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.28627452, g: 0.16862746, b: 0.30980393, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -506,7 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ff86bea4cc8744e98b6b0255924238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 877442551}
   activeSprite: {fileID: 21300000, guid: b542f2e0ded73dc4bba082f4cd43a7a4, type: 3}
   idleSprite: {fileID: 21300000, guid: 715bcd525f5023f40ac747a7bd2ee2ee, type: 3}
 --- !u!212 &877442551

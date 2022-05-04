@@ -12,39 +12,45 @@ namespace Game
 {
     public class CatalogueUI : MonoBehaviour
     {
+        public int page;
+        public AttributeTypes category;
         private void Start()
         {
-            PageUpdate(0);
+            page = 0;
+            category = AttributeTypes.Gravestone;
+            PageUpdate();
         }
 
-        private void PageUpdate(int page)
+        public void PageUpdate()
         {
-            var containers = GameState.Containers;
-            var y = 4;
+            List<Attribute> attributes;
+            attributes = (category == AttributeTypes.Gravestone) ? GameState.Gravestones : GameState.Wreaths;;
+            var y = 2.5f;
+            var x = -6.8f;
             var canvas = GameObject.Find("Canvas");
-            for (var i = page * 3; i < Math.Min(page * 3 + 3, containers.Count); i++)
+            foreach (Transform child in canvas.transform) {
+                Destroy(child.gameObject);
+            }
+            for (var i = page * 3; i < Math.Min(page * 3 + 3, attributes.Count); i++)
             {
-                var container = containers[i];
-                if (container.Type != ContainerTypes.Coffin)
-                    continue;
-                
-                var sprite = Resources.Load<Sprite>(container.Image);
+                var attribute = attributes[i];
+                var sprite = Resources.Load<Sprite>(attribute.Image);
                 if (sprite != null)
                 {
                     var image = (GameObject)Instantiate(Resources.Load("ShopImage"), canvas.transform);
                     image.GetComponent<Image>().sprite = sprite;
-                    image.transform.position = new Vector3(-5.8f, y, 0);
+                    image.transform.position = new Vector3(x, y, 0);
+                    image.transform.localScale = new Vector3(0.8f, 0.8f, 1);
                 }
 
                 var contName = (GameObject)Instantiate(Resources.Load("ShopText"), canvas.transform);
-                contName.GetComponent<Text>().text = container.Name;
-                contName.transform.position = new Vector3(0, y, 0);
+                contName.GetComponent<Text>().text = attribute.Name;
+                contName.transform.position = new Vector3(x + 4.5f, y + 0.5f, 0);
                 
                 var button = (GameObject)Instantiate(Resources.Load("ShopButton"), canvas.transform);
-                button.GetComponent<ShopButton>().Preference = container;
-                button.GetComponentInChildren<Text>().text = container.Price + "$";
-                button.GetComponentInChildren<Text>().text = container.Price + "$";
-                button.transform.position = new Vector3(5, y, 0);
+                button.GetComponent<ShopButton>().Preference = attribute;
+                button.GetComponentInChildren<Text>().text = attribute.Price + "$";
+                button.transform.position = new Vector3(x + 5.3f, y - 0.3f, 0);
 
                 y -= 3;
             }

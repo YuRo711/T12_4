@@ -13,19 +13,26 @@ namespace Game
     public class LaptopUI : MonoBehaviour
     {
         public ContainerTypes category;
+        public int page;
         private void Start()
         {
-            PageUpdate(0);
+            PageUpdate();
             category = ContainerTypes.Coffin;
         }
         
-        public void PageUpdate(int page)
+        public void PageUpdate()
         {
+            var containers = GameState.Containers;
+            var arrows = Resources.FindObjectsOfTypeAll<LaptopArrow>();
+            if (page != 0)
+                arrows[0].gameObject.SetActive(true);
+            if (page != (containers.Count - 1) / 3)
+                arrows[1].gameObject.SetActive(true);
+            
             var canvas = GameObject.Find("Canvas");
             foreach (Transform child in canvas.transform) {
                 Destroy(child.gameObject);
             }
-            var containers = GameState.Containers;
             var x = -4.7f;
             var y = 3.5f;
             for (var i = page * 3; i < Math.Min(page * 3 + 3, containers.Count); i++)
@@ -46,12 +53,9 @@ namespace Game
                 contName.GetComponent<Text>().text = container.Name;
                 contName.transform.position = new Vector3(x + 5.8f, y, 0);
                 
-                var price = (GameObject)Instantiate(Resources.Load("ShopText"), canvas.transform);
-                price.GetComponent<Text>().text = container.Price + "$";
-                price.transform.position = new Vector3(x + 8.3f, y, 0);
-                
                 var button = (GameObject)Instantiate(Resources.Load("ShopButton"), canvas.transform);
                 button.GetComponent<ShopButton>().Preference = container;
+                button.GetComponentInChildren<Text>().text = container.Price + "$";
                 button.transform.position = new Vector3(x + 10.3f, y, 0);
 
                 y -= 3;

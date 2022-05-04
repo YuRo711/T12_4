@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class ObjectActivation : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
     public Sprite activeSprite;
     public Sprite idleSprite;
-    private bool activated;
+
+    private void Start()
+    {
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
 
     private void OnMouseOver()
     {
