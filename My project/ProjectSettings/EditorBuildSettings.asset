@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: 5fa8d67970b85f844baccb01100c92c5
+  - enabled: 1
+    path: Assets/Scenes/phone.unity
+    guid: 2ffe717fef5af5349b3aed2d03bf769b
   m_configObjects: {}

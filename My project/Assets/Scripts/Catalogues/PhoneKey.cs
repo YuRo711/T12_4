@@ -8,23 +8,23 @@ namespace Game
     public class PhoneKey : MonoBehaviour
     {
         public int number;
-        public SpriteRenderer renderer;
-        public GameObject dateText;
+        private SpriteRenderer spriteRenderer;
+        private GameObject dateText;
 
         private void Start()
         {
-            renderer = gameObject.GetComponent<SpriteRenderer>();
+            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             dateText = GameObject.Find("DateText");
         }
 
         private void OnMouseEnter()
         {
-            renderer.color = new Color(102, 0, 102);
+            spriteRenderer.color = new Color(102, 102, 102);
         }
 
         private void OnMouseExit()
         {
-            renderer.color = Color.white;
+            spriteRenderer.color = Color.white;
         }
 
         private void OnMouseDown()

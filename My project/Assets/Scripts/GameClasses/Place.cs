@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 namespace Game
 {	public class Place : IPreference
 	{
-		public Place(string name = "Unnamed")
+		public Place(string name = "Unnamed", int price = 0)
         {
 			Name = name;
-		}
+			Price = price;
+        }
 		public string Name { get; set; }
 		public int Price { get; set; }
 		public int Day { get; set; }
