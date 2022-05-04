@@ -64,9 +64,12 @@
      <Compile Include="Assets\Scripts\Clients\DialogueState.cs" />
      <Compile Include="Assets\Scripts\Clients\Dialogues.cs" />
      <Compile Include="Assets\Scripts\UI\Notebook.cs" />
+     <Compile Include="Assets\Scripts\Catalogues\CatalogueUI.cs" />
+     <Compile Include="Assets\Scripts\Catalogues\NotebookClickable.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Attribute.cs" />
      <Compile Include="Assets\Scripts\GameClasses\CustomerOrder.cs" />
      <Compile Include="Assets\Scripts\Catalogues\LaptopUI.cs" />
+     <Compile Include="Assets\Scripts\GameClasses\IPreference.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Enums.cs" />
      <Compile Include="Assets\Scripts\Clients\DialogueWindow.cs" />
      <Compile Include="Assets\Scripts\UI\ObjectActivation.cs" />
@@ -75,9 +78,7 @@
      <Compile Include="Assets\Scripts\GameClasses\GameState.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Container.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Place.cs" />
-     <Compile Include="Assets\Scripts\GameClasses\IPreference.cs" />
-     <Compile Include="Assets\Scripts\Catalogues\CatalogueUI.cs" />
-     <Compile Include="Assets\Scripts\Catalogues\NotebookClickable.cs" />
+     <Compile Include="Assets\Scripts\Catalogues\LaptopCategory.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
