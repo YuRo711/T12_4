@@ -90,7 +90,6 @@ namespace Game
 			                "Sprites/coffin_1",
 			                "Спортивный",
 			                30),
-		                
 		                new Container(
 			                ContainerTypes.Coffin,
 			                "Sprites/coffin_2",
@@ -100,7 +99,23 @@ namespace Game
 			                ContainerTypes.Coffin,
 			                "Sprites/coffin_3",
 			                "BBQ",
-			                45)
+			                45),
+		                
+		                new Container(
+			                ContainerTypes.Urn,
+			                "Sprites/urn_1",
+			                "Классика",
+			                10),
+		                new Container(
+			                ContainerTypes.Urn,
+			                "Sprites/urn_3",
+			                "Яркая",
+			                15),
+		                new Container(
+			                ContainerTypes.Urn,
+			                "Sprites/urn_2",
+			                "Ар-деко",
+			                20)
 	                };
                 }
         

@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 185226486}
   - component: {fileID: 185226484}
   - component: {fileID: 185226483}
-  - component: {fileID: 185226487}
   - component: {fileID: 185226485}
   - component: {fileID: 185226488}
   m_Layer: 0
@@ -370,18 +369,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &185226487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185226482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59572578e8740444bbe9db57b77e0e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &185226488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,7 +924,6 @@ GameObject:
   - component: {fileID: 1303381662}
   - component: {fileID: 1303381661}
   - component: {fileID: 1303381660}
-  - component: {fileID: 1303381664}
   - component: {fileID: 1303381665}
   m_Layer: 0
   m_Name: Notebook
@@ -1072,18 +1058,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1303381664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303381659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8432555bb4992240844dc02168e7b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1303381665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,6 +1300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueQueue: []
+  state: 0
 --- !u!1 &1555483787
 GameObject:
   m_ObjectHideFlags: 0
