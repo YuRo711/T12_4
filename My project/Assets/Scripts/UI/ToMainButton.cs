@@ -14,6 +14,12 @@ public class ToMainButton : MonoBehaviour
         pause.GetComponent<SpriteRenderer>().sprite = pause.GetComponent<ObjectActivation>().idleSprite;
         if (SceneManager.GetActiveScene().name == "menu")
             SceneManager.LoadScene(GameState.LastScene);
+        else if (SceneManager.GetActiveScene().name == "phone")
+        {
+            GameState.Money += GameObject.Find("OK").GetComponent<PhoneOkButton>().servicesPrice;
+            GameState.LastScene = "main";
+            SceneManager.LoadScene("main");
+        }
         else
         {
             GameState.LastScene = "main";

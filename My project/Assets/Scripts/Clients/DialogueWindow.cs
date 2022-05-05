@@ -15,13 +15,13 @@ class DialogueWindow : MonoBehaviour
     private GameObject canvas;
     private string currentText;
     private float wordPause = 0.7f;
+    public DialogueState state;
 
     private void Start()
     {
         canvas = GameObject.Find("Canvas");
         currentText = "";
-        var state = DialogueState.Order;
-        dialogueQueue = GameState.DialogueQueue;
+        state = DialogueState.Order;
         foreach (var phrase in Dialogues.Phrases[GameState.CurrentCustomer.Name][state])
             dialogueQueue.Add(phrase);
     }
@@ -50,14 +50,22 @@ class DialogueWindow : MonoBehaviour
         currentText = "";
         foreach (var word in line)
         {
+            gameObject.GetComponent<Animator>().speed = 1;
             currentText += word;
             canvas = GameObject.Find("Canvas");
             var popup = (GameObject)Instantiate(Resources.Load("Popup"), canvas.transform);
             popup.GetComponentInChildren<TMP_Text>().text = currentText;
             yield return new WaitForSeconds(wordPause);
-            //Destroy(popup, wordPause);
+            Destroy(popup, wordPause);
+            Invoke(nameof(StopTalking), wordPause);
             currentText += " ";
         }
         yield return new WaitForSeconds(wordPause);
+    }
+
+    private void StopTalking()
+    {
+        gameObject.GetComponent<Animator>().speed = 0;
+        gameObject.GetComponent<Animator>().Play("Abigaile", 0, 0);
     }
 }

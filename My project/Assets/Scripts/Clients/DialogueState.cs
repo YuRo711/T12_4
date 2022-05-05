@@ -4,6 +4,7 @@
     {
         Order,
         Success,
-        Fail
+        Fail,
+        None
     }
 }
