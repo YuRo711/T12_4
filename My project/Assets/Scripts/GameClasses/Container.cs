@@ -27,5 +27,11 @@ namespace Game
 		public ContainerPalette Palette { get; set; }
 		//Add default image
 		public static string DefaultImage = null;
+
+		public bool IsMatch(RitualTypes ritual)
+        {
+			return (Type == ContainerTypes.Coffin && ritual == RitualTypes.Funeral)
+				|| (Type == ContainerTypes.Urn && ritual == RitualTypes.Cremation);
+        }
 	}
 }
