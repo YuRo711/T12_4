@@ -16,6 +16,13 @@ namespace Game
 		public string Name { get; set; }
 		public int Price { get; set; }
 		public int Day { get; set; }
+		public PlaceTypes Type { get; set; }
+
+		public bool IsMatch(RitualTypes ritual)
+        {
+			return (Type == PlaceTypes.Cementery && ritual == RitualTypes.Funeral)
+				|| (Type == PlaceTypes.Crematory && ritual == RitualTypes.Cremation);
+        }
 	}
 }
 

@@ -8,7 +8,8 @@ namespace Game
 {
 	public class CustomerOrder
 	{
-		public CustomerOrder(Customer customer, string text = "Kill me please", List<string> keyWords = null, 
+		public CustomerOrder(Customer customer, string text = "Kill me please", List<string> keyWords = null,
+			RitualTypes ritual = RitualTypes.Funeral,
 			ContainerStyles style = ContainerStyles.Classic,
 			ContainerPalette palette = ContainerPalette.Color, 
 			Dictionary<Attribute, int> services = null, 
@@ -17,6 +18,7 @@ namespace Game
 			Customer = customer;
 			Text = text;
 			KeyWords = (keyWords != null) ? keyWords : new List<string>();
+			Ritual = ritual;
 			PreferredContainerStyle = style;
 			PreferredContainerPalette = palette;
             Deadlines = (deadlines != null) ? deadlines : Tuple.Create<int, int>(0, 24);
@@ -25,6 +27,7 @@ namespace Game
 		public Customer Customer { get; set; }
 		public string Text { get; set; }
 		public List<string> KeyWords { get; set; }
+		public RitualTypes Ritual { get; set; }
 		public Tuple<int, int> Deadlines { get; set; }
 		public ContainerStyles PreferredContainerStyle { get; set; }
 		public ContainerPalette PreferredContainerPalette { get; set; }
