@@ -9,7 +9,8 @@ namespace Game
 	public enum ContainerTypes
 	{
 		Coffin,
-		Urn
+		Urn,
+		None
 	}
 
 	public enum ContainerStyles
@@ -31,4 +32,17 @@ namespace Game
 		Gravestone,
 		Wreath
     }
+	
+	public enum PlaceTypes
+	{
+		Cemetery,
+		Crematory,
+		None
+	}
+
+	public enum RitualTypes
+	{
+		Funeral,
+		Cremation
+	}
 }

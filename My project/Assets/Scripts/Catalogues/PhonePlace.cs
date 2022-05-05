@@ -8,6 +8,7 @@ namespace Game
     {
         public string placeName;
         public int price;
+        public PlaceTypes type;
         private GameObject placeText;
         private GameObject priceText;
         private GameObject okButton;
@@ -43,7 +44,7 @@ namespace Game
         private void OnMouseDown()
         {
             okButton.GetComponent<PhoneOkButton>().isChosen = true;
-            okButton.GetComponent<PhoneOkButton>().Place = new Place(placeName, price);
+            okButton.GetComponent<PhoneOkButton>().Place = new Place(type, placeName, price);
         }
     }
 }

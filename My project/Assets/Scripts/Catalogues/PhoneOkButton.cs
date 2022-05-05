@@ -9,6 +9,8 @@ namespace Game
     {
         public bool isChosen;
         public Place Place;
+        public int Day;
+        public int Month;
         public int servicesPrice;
 
         private void Update()
@@ -24,7 +26,9 @@ namespace Game
             if (Place != null)
             {
                 GameState.Money -= Place.Price;
-                GameState.CurrentOrder.Add(Place);
+                GameState.PlayerOrder.Place = Place;
+                GameState.PlayerOrder.Day = Day;
+                GameState.PlayerOrder.Month = Month;
                 GameState.LastScene = "main";
                 SceneManager.LoadScene("main");
             }

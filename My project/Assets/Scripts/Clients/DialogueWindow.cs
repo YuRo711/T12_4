@@ -16,6 +16,7 @@ class DialogueWindow : MonoBehaviour
     private string currentText;
     private float wordPause = 0.7f;
     public DialogueState state;
+    public bool talking = true;
 
     private void Start()
     {
@@ -65,6 +66,7 @@ class DialogueWindow : MonoBehaviour
 
     private void StopTalking()
     {
+        talking = false;
         gameObject.GetComponent<Animator>().speed = 0;
         gameObject.GetComponent<Animator>().Play("Abigaile", 0, 0);
     }

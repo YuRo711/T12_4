@@ -10,10 +10,12 @@ namespace Game
         public int number;
         private SpriteRenderer spriteRenderer;
         private GameObject dateText;
+        private PhoneOkButton OkButton;
 
         private void Start()
         {
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            OkButton = GameObject.Find("OK").GetComponent<PhoneOkButton>();
             dateText = GameObject.Find("DateText");
         }
 
@@ -35,8 +37,14 @@ namespace Game
             if (len > 4)
                 return;
             if (len == 2)
+            {
+                OkButton.Day = int.Parse(dateText.GetComponent<Text>().text);
                 dateText.GetComponent<Text>().text += ".";
+            }
             dateText.GetComponent<Text>().text += number;
+            if (len == 4)
+                OkButton.Month = int.Parse(dateText.GetComponent<Text>().text.Substring(3, 2));
+            
         }
     }
 }

@@ -11,6 +11,8 @@ public class SceneChanger : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GameState.Paused)
+            return;
         SceneManager.LoadScene(target);
         GameState.LastScene = target;
     }

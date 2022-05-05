@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game;
 using UnityEngine;
 
 public class ObjectActivation : MonoBehaviour
@@ -16,11 +17,15 @@ public class ObjectActivation : MonoBehaviour
 
     private void OnMouseOver()
     {
+        if (GameState.Paused)
+            return;
         spriteRenderer.sprite = activeSprite;
     }
 
     private void OnMouseExit()
     {
+        if (GameState.Paused)
+            return;
         spriteRenderer.sprite = idleSprite;
     }
 }

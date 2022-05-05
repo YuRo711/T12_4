@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Clients;
 using UnityEngine;
 
 namespace Game
@@ -13,6 +14,7 @@ namespace Game
         {
             Name = name;
             Sprite = sprite;
+            Order = CustomersDict.Orders[name];
         }
 
         public string Name { get; set; }

@@ -24,7 +24,7 @@ namespace Game
 			CustomersToday = new List<Customer> { new Customer("a", "Abigaile") };
 			Tasks = new List<string>();
 			CurrentCustomer = CustomersToday[0];
-			CurrentOrder = new List<IPreference>();
+			PlayerOrder = new PlayerOrder(CurrentCustomer);
 			LastScene = "main";
         }
 		
@@ -35,7 +35,6 @@ namespace Game
 		public static int ServedClientsToday { get; set; }
 		public static int ServedClientsTotal { get; set; }
 		public static List<Customer> CustomersToday { get; set; }
-		public static List<Place> Places { get; set; }
 		public static List<Container> Containers { get; set; }
 		public static List<Attribute> Gravestones { get; set; }
 		public static List<Attribute> Wreaths { get; set; }
@@ -43,9 +42,9 @@ namespace Game
 
 		public static string LastScene;
 		
-		public static List<IPreference> CurrentOrder { get; set; }
+		public static PlayerOrder PlayerOrder { get; set; }
 		public static List<Customer> Customers { get; set; }
-		public static List<string> DialogueQueue { get; set; } = new List<string>();
+		public static int Score { get; set; }
 
 		public static List<string> Tasks { get; set; }
 
@@ -75,7 +74,7 @@ namespace Game
                     switch (day)
                     {
                         case 0:
-                            yield return new CustomerOrder(Customers[0]);
+                            yield return Customers[0].Order;
                             break;
                     }
                     yield break;
