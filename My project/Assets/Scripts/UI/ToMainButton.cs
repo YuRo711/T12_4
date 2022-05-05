@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ToMainButton : MonoBehaviour
 {
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         var pause = Resources.FindObjectsOfTypeAll<Pause>()[0].gameObject;
         pause.SetActive(true);
