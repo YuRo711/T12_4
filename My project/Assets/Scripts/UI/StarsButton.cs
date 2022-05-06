@@ -12,6 +12,9 @@ namespace Game
                 else
                     obj.color = Color.white;
             GameState.Score += GameState.PlayerOrder.Stars;
+            GameState.Money += GameState.PlayerOrder.Award;
+            GameState.NextClient();
+            GameState.Paused = false;
             Destroy(gameObject);
         }
     }

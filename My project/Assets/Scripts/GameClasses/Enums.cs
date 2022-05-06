@@ -16,7 +16,8 @@ namespace Game
 	public enum ContainerStyles
 	{
 		Classic,
-		Custom
+		Cross,
+		Rich
 	}
 
 	public enum ContainerPalette
@@ -30,9 +31,9 @@ namespace Game
     {
 		Service,
 		Gravestone,
-		Wreath
+		Wreath,
     }
-	
+
 	public enum PlaceTypes
 	{
 		Cemetery,

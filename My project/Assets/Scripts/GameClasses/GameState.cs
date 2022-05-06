@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Clients;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,12 +23,26 @@ namespace Game
 			ServedClientsToday = 0;
 			ServedClientsTotal = 0;
 			SetGameObjects();
-			CustomersToday = new List<Customer> { new Customer("a", "Abigaile") };
 			Tasks = new List<string>();
 			CurrentCustomer = CustomersToday[0];
 			PlayerOrder = new PlayerOrder(CurrentCustomer);
 			LastScene = "main";
         }
+
+		public static void NextClient()
+		{
+			ServedClientsToday++;
+			Tasks = new List<string>();
+			if (CustomersToday.Count == ServedClientsToday)
+				return;
+			CurrentCustomer = CustomersToday[ServedClientsToday];
+			PlayerOrder = new PlayerOrder(CurrentCustomer);
+			var client = GameObject.Find("Client");
+			Debug.Log(CurrentCustomer.Sprite);
+			client.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(CurrentCustomer.Sprite);
+			client.GetComponent<Animator>().Play(CurrentCustomer.Name, 0, 0);
+			client.GetComponent<DialogueWindow>().talked = false;
+		}
 		
 		public static int Money { get; set; }
 		public static int Day { get; set; }
@@ -38,7 +54,6 @@ namespace Game
 		public static List<Container> Containers { get; set; }
 		public static List<Attribute> Gravestones { get; set; }
 		public static List<Attribute> Wreaths { get; set; }
-		public static List<Attribute> Services { get; set; }
 
 		public static string LastScene;
 		
@@ -56,17 +71,17 @@ namespace Game
                     Containers = GetContainers();
                     Gravestones = GetGravestones();
                     Wreaths = GetWreaths();
+                    CustomersToday = GetCustomers();
                     /*
-                    Services = GetServices();
-                    Customers = GetCustomers();
                     CustomerOrdersToday = GetOrders(Day);
                     */
                 }
         
                 //Add objects here
-                private static IEnumerable<Customer> GetCustomers()
+                private static List<Customer> GetCustomers()
                 {
-                    yield break;
+	                return new List<Customer> { new Customer("Sprites/Characters/Abigaile", "Abigaile"),
+		                new Customer("Sprites/Characters/Harold", "Harold") };
                 }
         
                 private static IEnumerable<CustomerOrder> GetOrders(int day)
@@ -86,19 +101,21 @@ namespace Game
 	                {
 		                new Container(
 			                ContainerTypes.Coffin,
-			                "Sprites/coffin_1",
-			                "Спортивный",
-			                30),
+			                "Sprites/coffin_5",
+			                "Деревянный",
+			                20),
 		                new Container(
 			                ContainerTypes.Coffin,
-			                "Sprites/coffin_2",
-			                "Гламур",
-			                40),
+			                "Sprites/coffin_6",
+			                "С крестом",
+			                30,
+			                ContainerStyles.Cross),
 		                new Container(
 			                ContainerTypes.Coffin,
-			                "Sprites/coffin_3",
-			                "BBQ",
-			                45),
+			                "Sprites/coffin_4",
+			                "Саркофаг",
+			                80,
+			                ContainerStyles.Rich),
 		                
 		                new Container(
 			                ContainerTypes.Urn,
@@ -114,7 +131,8 @@ namespace Game
 			                ContainerTypes.Urn,
 			                "Sprites/urn_2",
 			                "Ар-деко",
-			                20)
+			                25,
+			                ContainerStyles.Rich)
 	                };
                 }
         
@@ -143,11 +161,6 @@ namespace Game
                 private static List<Attribute> GetWreaths()
                 {
 	                return new List<Attribute>();
-                }
-        
-                private static IEnumerable<Attribute> GetServices()
-                {
-                    yield break;
                 }
 	}
 }

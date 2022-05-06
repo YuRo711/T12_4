@@ -12,7 +12,22 @@ namespace Clients
             {
                 "Abigaile", new CustomerOrder(
                     attributes: new List<Attribute>(),
-                    deadlines: Tuple.Create(0, 0))
+                    deadlines: Tuple.Create(7, 7),
+                    placeName: "Крематорий",
+                    ritual: RitualTypes.Cremation,
+                    style: ContainerStyles.Rich)
+            },
+            {
+                "Harold", new CustomerOrder(
+                    attributes: new List<Attribute>
+                    {
+                        new Attribute(AttributeTypes.Service, name: "Отпевание"),
+                        new Attribute(AttributeTypes.Gravestone, "Sprites/stone_1", "Кельтский крест", 50)
+                    },
+                    deadlines: Tuple.Create(9, 9),
+                    placeName: "Кладбище св. Терентия",
+                    ritual: RitualTypes.Funeral,
+                    style: ContainerStyles.Classic)
             }
         };
     }

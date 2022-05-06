@@ -56,23 +56,15 @@ namespace Game
         {
             get
             {
-	            var temp1 = Convert.ToInt32(Place.IsMatch(customerOrder.Ritual));
-	            var temp2 = Convert.ToInt32(Container.IsMatch(customerOrder.Ritual));
-	            var temp3 = Convert.ToInt32(Day >= customerOrder.Deadlines.Item1
-	                                        && Day <= customerOrder.Deadlines.Item2 && Month == 5);
-	            var temp4 = servicesScore;
-	            var temp5 = Convert.ToInt32(Day >= customerOrder.Deadlines.Item1
-	                                        && Day <= customerOrder.Deadlines.Item2 && Month == 5);
-	            var temp6 = Convert.ToInt32(Container.Style == customerOrder.PreferredContainerStyle);
-	            var temp7 = Convert.ToInt32(Container.Palette == customerOrder.PreferredContainerPalette);
 				return
 					  0.25 * Convert.ToInt32(Place.IsMatch(customerOrder.Ritual))
 					+ 0.25 * Convert.ToInt32(Container.IsMatch(customerOrder.Ritual))
 					+ 0.18 * servicesScore
 					+ 0.12 * Convert.ToInt32(Day >= customerOrder.Deadlines.Item1 
 										&& Day <= customerOrder.Deadlines.Item2 && Month == 5)
-					+ 0.10 * Convert.ToInt32(Container.Style == customerOrder.PreferredContainerStyle)
-					+ 0.10 * Convert.ToInt32(Container.Palette == customerOrder.PreferredContainerPalette);
+					+ 0.07 * Convert.ToInt32(Container.Style == customerOrder.PreferredContainerStyle)
+					+ 0.06 * Convert.ToInt32(Container.Palette == customerOrder.PreferredContainerPalette)
+					  + 0.07 * Convert.ToInt32(Place.Name == customerOrder.PlaceName);
             }
         }
 

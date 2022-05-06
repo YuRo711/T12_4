@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using Clients;
 using Game;
 using TMPro;
@@ -15,32 +16,39 @@ class DialogueWindow : MonoBehaviour
     private GameObject canvas;
     private string currentText;
     private float wordPause = 0.7f;
-    public DialogueState state;
-    public bool talking = true;
+    public bool talking;
+    public bool talked;
 
     private void Start()
     {
+        StopTalking();
         canvas = GameObject.Find("Canvas");
         currentText = "";
-        state = DialogueState.Order;
-        foreach (var phrase in Dialogues.Phrases[GameState.CurrentCustomer.Name][state])
-            dialogueQueue.Add(phrase);
+    }
+
+    private void OnMouseDown()
+    {
+        if (talked)
+            return;
+        foreach (var phrase in Dialogues.Phrases[GameState.CurrentCustomer.Name])
+            gameObject.GetComponent<DialogueWindow>().dialogueQueue.Add(phrase);
+        talking = true;
     }
 
     private void Update()
     {
-        if (!GameState.Paused)
+        if (!GameState.Paused && talking)
         {
             StartCoroutine(PhraseUpdate());
+            dialogueQueue = new List<string>();
         }
-        dialogueQueue = new List<string>();
     }
 
     private IEnumerator PhraseUpdate()
     {
         foreach (var line in dialogueQueue)
         {
-            var words = line.Split(' ');
+            var words = Regex.Split(line, @"\ (?![^<]*\>)");
             StartCoroutine(TextUpdate(words));
             yield return new WaitForSeconds(wordPause * words.Length);
         }
@@ -57,7 +65,7 @@ class DialogueWindow : MonoBehaviour
             var popup = (GameObject)Instantiate(Resources.Load("Popup"), canvas.transform);
             popup.GetComponentInChildren<TMP_Text>().text = currentText;
             yield return new WaitForSeconds(wordPause);
-            Destroy(popup, wordPause);
+            Destroy(popup, 3.02f);
             Invoke(nameof(StopTalking), wordPause);
             currentText += " ";
         }
@@ -67,7 +75,8 @@ class DialogueWindow : MonoBehaviour
     private void StopTalking()
     {
         talking = false;
+        talked = true;
         gameObject.GetComponent<Animator>().speed = 0;
-        gameObject.GetComponent<Animator>().Play("Abigaile", 0, 0);
+        gameObject.GetComponent<Animator>().Play(GameState.CurrentCustomer.Name, 0, 0);
     }
 }

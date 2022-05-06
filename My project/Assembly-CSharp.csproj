@@ -63,7 +63,6 @@
      <Compile Include="Assets\Scripts\Catalogues\PhoneOkButton.cs" />
      <Compile Include="Assets\Scripts\UI\SceneChanger.cs" />
      <Compile Include="Assets\Scripts\GameClasses\PlayerOrder.cs" />
-     <Compile Include="Assets\Scripts\Clients\DialogueState.cs" />
      <Compile Include="Assets\Scripts\Catalogues\CatalogueCategory.cs" />
      <Compile Include="Assets\Scripts\Catalogues\LaptopArrow.cs" />
      <Compile Include="Assets\Scripts\Catalogues\PhoneKey.cs" />
