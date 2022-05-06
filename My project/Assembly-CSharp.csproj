@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Catalogues\NotebookUI.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Customer.cs" />
+     <Compile Include="Assets\Scripts\UI\TutorialUI.cs" />
      <Compile Include="Assets\Scripts\UI\Pause.cs" />
      <Compile Include="Assets\Scripts\Catalogues\ShopButton.cs" />
      <Compile Include="Assets\Scripts\Catalogues\PhonePlace.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Scripts\Catalogues\NotebookClickable.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Attribute.cs" />
      <Compile Include="Assets\Scripts\GameClasses\CustomerOrder.cs" />
+     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\Catalogues\LaptopUI.cs" />
      <Compile Include="Assets\Scripts\GameClasses\IPreference.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Enums.cs" />
@@ -86,7 +88,6 @@
      <Compile Include="Assets\Scripts\Catalogues\CataloguePage.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Container.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Place.cs" />
-     <Compile Include="Assets\Scripts\UI\TutorialUI.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

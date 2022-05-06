@@ -67,6 +67,7 @@ class DialogueWindow : MonoBehaviour
             yield return new WaitForSeconds(wordPause);
             Destroy(popup, 3.02f);
             Invoke(nameof(StopTalking), wordPause);
+            talked = true;
             currentText += " ";
         }
         yield return new WaitForSeconds(wordPause);
@@ -75,7 +76,6 @@ class DialogueWindow : MonoBehaviour
     private void StopTalking()
     {
         talking = false;
-        talked = true;
         gameObject.GetComponent<Animator>().speed = 0;
         gameObject.GetComponent<Animator>().Play(GameState.CurrentCustomer.Name, 0, 0);
     }

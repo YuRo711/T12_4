@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Game
 {
@@ -76,11 +77,12 @@ namespace Game
 				var customerAttributes = customerOrder.PreferredAttributes;
 				if (customerAttributes.Count == 0)
 					return 1;
-				var singleAttributeScore = 1 / customerAttributes.Count;
-				var score = 0;
+				var singleAttributeScore = (double)1 / customerAttributes.Count;
+				double score = 0;
 				foreach (var attribute in customerAttributes)
-					if (Attributes.Contains(attribute))
-						score += singleAttributeScore;
+					foreach (var a in Attributes)
+						if (attribute.Name == a.Name)
+							score += singleAttributeScore;
 				return score;
             }
         }

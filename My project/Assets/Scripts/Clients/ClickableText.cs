@@ -23,10 +23,11 @@ public class ClickableText : MonoBehaviour, IPointerClickHandler
         if (linkIndex == -1)
             return;
         var linkID = text.textInfo.linkInfo[linkIndex].GetLinkID();
-        if (GameState.Tasks.Contains(linkID))
-            return;
         if (SceneManager.GetActiveScene().name != "tutorial")
-            GameState.Tasks.Add(linkID);
+            if (GameState.Tasks.Contains(linkID))
+                return;
+            else
+                GameState.Tasks.Add(linkID);
         var canvas = GameObject.Find("Canvas");
         var moving = (GameObject)Instantiate(Resources.Load("MovingText"), canvas.transform);
         moving.GetComponent<TMP_Text>().text = "<color=red>" + linkID + "</color>";
@@ -40,7 +41,7 @@ public class ClickableText : MonoBehaviour, IPointerClickHandler
         var pos = moving.transform.position;
         var dx = (destination.x - pos.x) / 150;
         var dy = (destination.y - pos.y) / 150;
-        Destroy(moving, 1.6f);
+        Destroy(moving, 1.8f);
         for (var i = 0; i < 150; i++)
         {
             pos = moving.transform.position;

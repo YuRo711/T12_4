@@ -15,10 +15,11 @@ namespace Game
 
         private void Update()
         {
-            if (GameState.Money < Place.Price)
-                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            else
-                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            if (Place != null)
+                if (GameState.Money < Place.Price)
+                    gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                else
+                    gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
 
         private void OnMouseDown()

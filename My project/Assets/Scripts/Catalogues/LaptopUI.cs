@@ -22,7 +22,6 @@ namespace Game
         
         public void PageUpdate()
         {
-            Debug.Log(category);
             var containers = GameState.Containers;
             var arrows = Resources.FindObjectsOfTypeAll<LaptopArrow>();
             if (page != 0)
@@ -42,7 +41,6 @@ namespace Game
             {
                 var container = containers[i];
                 i++;
-                Debug.Log(container.Type);
                 if (container.Type != category)
                     continue;
                 count++;

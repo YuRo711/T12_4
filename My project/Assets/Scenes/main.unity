@@ -1528,6 +1528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueQueue: []
   talking: 0
+  talked: 0
 --- !u!60 &1553737285
 PolygonCollider2D:
   m_ObjectHideFlags: 0

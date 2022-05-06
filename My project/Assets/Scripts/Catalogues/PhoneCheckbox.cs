@@ -24,6 +24,7 @@ public class PhoneCheckbox : MonoBehaviour
         {
             spriteRenderer.sprite = chosen;
             isChosen = true;
+            GameState.PlayerOrder.Attributes.Add(new Game.Attribute(AttributeTypes.Service, null, serviceName, price));
             GameState.Money -= price;
             GameObject.Find("OK").GetComponent<PhoneOkButton>().servicesPrice += price;
         }

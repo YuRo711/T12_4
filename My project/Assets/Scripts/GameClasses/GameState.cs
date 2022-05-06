@@ -38,7 +38,6 @@ namespace Game
 			CurrentCustomer = CustomersToday[ServedClientsToday];
 			PlayerOrder = new PlayerOrder(CurrentCustomer);
 			var client = GameObject.Find("Client");
-			Debug.Log(CurrentCustomer.Sprite);
 			client.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(CurrentCustomer.Sprite);
 			client.GetComponent<Animator>().Play(CurrentCustomer.Name, 0, 0);
 			client.GetComponent<DialogueWindow>().talked = false;
@@ -82,17 +81,6 @@ namespace Game
                 {
 	                return new List<Customer> { new Customer("Sprites/Characters/Abigaile", "Abigaile"),
 		                new Customer("Sprites/Characters/Harold", "Harold") };
-                }
-        
-                private static IEnumerable<CustomerOrder> GetOrders(int day)
-                {
-                    switch (day)
-                    {
-                        case 0:
-                            yield return Customers[0].Order;
-                            break;
-                    }
-                    yield break;
                 }
         
                 private static List<Container> GetContainers()

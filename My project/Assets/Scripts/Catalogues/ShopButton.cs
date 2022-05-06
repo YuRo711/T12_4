@@ -20,6 +20,5 @@ public class ShopButton : MonoBehaviour
             GameState.PlayerOrder.Container = container;
         else if (Preference is Attribute attribute)
             GameState.PlayerOrder.Attributes.Add(attribute);
-        Debug.Log(Preference.Name);
     }
 }
