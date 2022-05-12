@@ -15,16 +15,10 @@ namespace Game
 
 	public enum ContainerStyles
 	{
+		None,
 		Classic,
 		Cross,
 		Rich
-	}
-
-	public enum ContainerPalette
-	{
-		Dark,
-		Light,
-		Color
 	}
 
 	public enum AttributeTypes

@@ -7,7 +7,6 @@ namespace Game
 {
     public class MoneyUI : MonoBehaviour
     {
-        public GameObject state;
         public int money;
         private GUIStyle style;
         private static bool exists;
@@ -15,7 +14,6 @@ namespace Game
         private void Start()
         {
             style = GUIStyle.none;
-            style.normal.textColor = Color.black;
             money = GameState.Money;
             DontDestroyOnLoad(this);
             if (!exists)
@@ -33,6 +31,7 @@ namespace Game
 
         private void OnGUI()
         {
+            style.normal.textColor = Color.black;
             style.fontSize = 22;
             money = GameState.Money;
             var textArea = new Rect(230,358, 300, 100);

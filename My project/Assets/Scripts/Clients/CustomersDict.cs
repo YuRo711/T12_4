@@ -28,6 +28,9 @@ namespace Clients
                     placeName: "Кладбище св. Терентия",
                     ritual: RitualTypes.Funeral,
                     style: ContainerStyles.Classic)
+            },
+            {
+                "Tyler", new CustomerOrder()
             }
         };
     }

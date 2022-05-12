@@ -33,7 +33,11 @@ namespace Clients
                         "Три дня надо подождать, это, получается, <color=red><link=9 мая>9</link></color> " +
                         "<color=red><link=9 мая>мая</link></color> будет, кхе-кхем..."
                     }
-                }
+                },
+                {"Tyler", new []
+                {
+                    ""
+                }}
             };
     }
 }
