@@ -30,7 +30,13 @@ namespace Clients
                     style: ContainerStyles.Cross)
             },
             {
-                "Tyler", new CustomerOrder()
+                "Tyler", new CustomerOrder(
+                    attributes: new List<Attribute>
+                        {new Attribute(AttributeTypes.Service, null, "Плакальщицы", 25)},
+                deadlines: Tuple.Create(13, 20),
+                placeName: "Центральное кладбище",
+                ritual: RitualTypes.Funeral,
+                style: ContainerStyles.None)
             }
         };
     }
