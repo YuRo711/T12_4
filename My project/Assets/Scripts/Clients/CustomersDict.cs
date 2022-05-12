@@ -27,7 +27,7 @@ namespace Clients
                     deadlines: Tuple.Create(9, 9),
                     placeName: "Кладбище св. Терентия",
                     ritual: RitualTypes.Funeral,
-                    style: ContainerStyles.Classic)
+                    style: ContainerStyles.Cross)
             },
             {
                 "Tyler", new CustomerOrder()

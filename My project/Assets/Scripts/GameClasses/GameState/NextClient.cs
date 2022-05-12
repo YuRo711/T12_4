@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Clients;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +24,7 @@ namespace Game
             client.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(CurrentCustomer.Sprite);
             client.GetComponent<Animator>().Play(CurrentCustomer.Name, 0, 0);
             client.GetComponent<DialogueWindow>().talked = false;
+            client.GetComponent<ClientSprite>().Appear();
         }
     }
 }

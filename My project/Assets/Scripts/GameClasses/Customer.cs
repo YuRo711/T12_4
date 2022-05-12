@@ -19,6 +19,7 @@ namespace Game
 
         public string Name { get; set; }
         public string Sprite { get; set; }
+        public bool Criminal { get; set; }
 
         public CustomerOrder Order { get; set; }
     }
