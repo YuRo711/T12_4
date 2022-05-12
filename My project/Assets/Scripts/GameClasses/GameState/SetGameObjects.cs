@@ -10,9 +10,6 @@ namespace Game
                     Gravestones = GetGravestones();
                     Wreaths = GetWreaths();
                     CustomersToday = customersByDays[Day - 1];;
-                    /*
-                    CustomerOrdersToday = GetOrders(Day);
-                    */
                 }
         
                 //Add objects here

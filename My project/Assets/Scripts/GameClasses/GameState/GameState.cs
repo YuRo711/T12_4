@@ -19,6 +19,7 @@ namespace Game
 		{
 			var timer = GameObject.Find("Timer").GetComponent<Timer>();
 			timer.timeLeft = timer.dayLength;
+			StartMoney = money;
 			Money = money;
 			Day = 1;
 			ServedClientsToday = 0;
@@ -30,6 +31,7 @@ namespace Game
 			LastScene = "main";
         }
 		
+		public static int StartMoney { get; set; }
 		public static int Money { get; set; }
 		public static int Day { get; set; }
 		public static Customer CurrentCustomer { get; set; }

@@ -20,7 +20,7 @@ namespace Game
             {
                 exists = true;
                 GameState.Restart();
-                if (SceneManager.GetActiveScene().name == "menu")
+                if (SceneManager.GetActiveScene().name == "menu" || SceneManager.GetActiveScene().name == "results")
                     gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 else
                     gameObject.GetComponent<SpriteRenderer>().enabled = true;
@@ -31,6 +31,8 @@ namespace Game
 
         private void OnGUI()
         {
+            if (GameState.Paused)
+                return;
             style.normal.textColor = Color.black;
             style.fontSize = 22;
             money = GameState.Money;

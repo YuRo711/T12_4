@@ -13,6 +13,7 @@ namespace Clients
             if (GameObject.Find("Client").GetComponent<DialogueWindow>().talking)
                 return;
             var stars = GameState.PlayerOrder.Stars;
+            GameState.Score += stars;
             for (int i = 0; i < stars; i++)
             {
                 var star = (GameObject)Instantiate(Resources.Load("Star"), canvas.transform);

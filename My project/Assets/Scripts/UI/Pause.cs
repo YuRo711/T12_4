@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,6 +19,7 @@ public class Pause : MonoBehaviour
     private void OnMouseDown()
     {
         gameObject.SetActive(false);
+        GameState.Paused = true;
         SceneManager.LoadScene("menu");
     }
 }

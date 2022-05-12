@@ -31,11 +31,13 @@ public class Timer : MonoBehaviour
                 timeLeft -= 1;
             yield return new WaitForSeconds(1f);
         }
-        GameState.Paused = true;
+        SceneManager.LoadScene("results");
     }
 
     private void OnGUI()
     {
+        if (GameState.Paused)
+            return;
         style.normal.textColor = new Color(50, 0, 50);
         var textArea = new Rect(630, 358, 300, 100);
         var minutes = timeLeft / 60;

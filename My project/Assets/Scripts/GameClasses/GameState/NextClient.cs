@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -11,7 +12,11 @@ namespace Game
             ServedClientsToday++;
             Tasks = new List<string>();
             if (CustomersToday.Count == ServedClientsToday)
+            {
+                Paused = true;
+                SceneManager.LoadScene("results");
                 return;
+            }
             CurrentCustomer = CustomersToday[ServedClientsToday];
             PlayerOrder = new PlayerOrder(CurrentCustomer);
             var client = GameObject.Find("Client");
