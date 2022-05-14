@@ -25,6 +25,7 @@ namespace Game
             client.GetComponent<Animator>().Play(CurrentCustomer.Name, 0, 0);
             client.GetComponent<DialogueWindow>().talked = false;
             client.GetComponent<ClientSprite>().Appear();
+            client.GetComponent<ClientSprite>().appeared = false;
         }
     }
 }

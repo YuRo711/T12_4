@@ -17,7 +17,7 @@ namespace Game
 		{
 			Ritual = ritual;
 			PreferredContainerStyle = style;
-            Deadlines = (deadlines != null) ? deadlines : Tuple.Create<int, int>(0, 24);
+            Deadlines = (deadlines != null) ? deadlines : Tuple.Create(0, 0);
             PreferredAttributes = attributes;
             PlaceName = placeName;
 		}

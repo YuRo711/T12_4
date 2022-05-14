@@ -369,8 +369,8 @@ MonoBehaviour:
     \u0441\u043B\u043E\u0432\u0430, \u0447\u0442\u043E\u0431\u044B \u0434\u0435\u043B\u0430\u0442\u044C
     \u0437\u0430\u043C\u0435\u0442\u043A\u0438"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 01aca2d23a3c5e34eaacf18bfb850f01, type: 2}
+  m_sharedMaterial: {fileID: -1717100465674656342, guid: 01aca2d23a3c5e34eaacf18bfb850f01, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -394,8 +394,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -495,8 +495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.020363, y: -173.8807}
-  m_SizeDelta: {x: 95.1, y: 28.97}
+  m_AnchoredPosition: {x: 1.85, y: -169.54}
+  m_SizeDelta: {x: 90.78, y: 37.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637275571
 MonoBehaviour:
@@ -1337,8 +1337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 75}
-  m_SizeDelta: {x: 100, y: 70}
+  m_AnchoredPosition: {x: 114.58, y: 79.34}
+  m_SizeDelta: {x: 110.85, y: 78.68}
   m_Pivot: {x: 0.49999994, y: 0.49999997}
 --- !u!114 &1045018337
 MonoBehaviour:
@@ -1783,7 +1783,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 008a8dfd4c280384092a2c1949023fff, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1816,7 +1816,7 @@ GameObject:
   - component: {fileID: 2059256157}
   - component: {fileID: 2059256159}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1831,7 +1831,7 @@ AudioSource:
   m_GameObject: {fileID: 2059256156}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 91ced467628b51d459a7b1c065284f41, type: 2}
   m_audioClip: {fileID: 8300000, guid: f9793480981dcbd458ff4d1c0ea40d88, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

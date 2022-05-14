@@ -26,11 +26,12 @@ class DialogueWindow : MonoBehaviour
         currentText = "";
     }
 
+    // Нажатие на клиента
     private void OnMouseDown()
     {
         if (talked)
             return;
-        foreach (var phrase in Dialogues.Phrases[GameState.CurrentCustomer.Name])
+        foreach (var phrase in Dialogues.OrderDict[GameState.CurrentCustomer.Name])
             gameObject.GetComponent<DialogueWindow>().dialogueQueue.Add(phrase);
         talking = true;
     }

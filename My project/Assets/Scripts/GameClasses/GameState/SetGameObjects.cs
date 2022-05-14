@@ -79,7 +79,24 @@ namespace Game
         
                 private static List<Attribute> GetWreaths()
                 {
-	                return new List<Attribute>();
+	                return new List<Attribute>
+	                {
+		                new Attribute(
+			                AttributeTypes.Wreath,
+			                "Sprites/Венок",
+			                "1",
+			                1),
+		                new Attribute(
+			                AttributeTypes.Wreath,
+			                "Sprites/Венок2",
+			                "1",
+			                1),
+		                new Attribute(
+			                AttributeTypes.Wreath,
+			                "Sprites/Венок3",
+			                "1",
+			                1)
+	                };
                 }
     }
 }

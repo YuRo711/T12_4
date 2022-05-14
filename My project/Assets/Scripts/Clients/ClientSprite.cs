@@ -8,6 +8,7 @@ namespace Clients
     public class ClientSprite : MonoBehaviour
     {
         private SpriteRenderer spriteRenderer;
+        public bool appeared;
 
         private void Start()
         {
@@ -18,6 +19,7 @@ namespace Clients
         public void Appear()
         {
             StartCoroutine(ChangeColor());
+            appeared = true;
         }
 
         private IEnumerator ChangeColor()

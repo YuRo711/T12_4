@@ -37,6 +37,15 @@ namespace Clients
                 placeName: "Центральное кладбище",
                 ritual: RitualTypes.Funeral,
                 style: ContainerStyles.None)
+            },
+            {
+                "Raven", new CustomerOrder()
+            },
+            {
+                "Robber", new CustomerOrder()
+            },
+            {
+                "Milly", new CustomerOrder()
             }
         };
     }

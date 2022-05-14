@@ -18,6 +18,7 @@ namespace Game
 		None,
 		Classic,
 		Cross,
+		Tiny,
 		Rich
 	}
 

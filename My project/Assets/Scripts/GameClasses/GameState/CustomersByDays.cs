@@ -10,7 +10,7 @@ namespace Game
             {
                 new Customer("Sprites/Characters/Harold", "Harold"),
                 new Customer("Sprites/Characters/Abigaile", "Abigaile"),
-                //new Customer("Sprites/Characters/Tyler", "Tyler")
+                new Customer("Sprites/Characters/Tyler", "Tyler")
             }
         };
     }

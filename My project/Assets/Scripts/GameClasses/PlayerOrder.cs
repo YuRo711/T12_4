@@ -11,17 +11,15 @@ namespace Game
     {
 		public PlayerOrder(Customer customer)
         {
-			Customer = customer;
 			Day = 0;
 			Month = 0;
 			Place = new Place(PlaceTypes.None);
 			Coffin = new Container(ContainerTypes.None);
 			Urn = new Container(ContainerTypes.None);
 			Attributes = new List<Attribute>();
-			customerOrder = Customer.Order;
+			customerOrder = customer.Order;
         }
 
-		public Customer Customer { get; set; }
 		public int Day { get; set; }
 		public int Month { get; set; }
 		public Place Place { get; set; }

@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
             Destroy(gameObject);
         timeLeft = dayLength;
         style = GUIStyle.none;
-        style.fontSize = 22;
+        style.font = Resources.Load<Font>("F77 Minecraft");
         StartCoroutine(Tick());
     }
 
@@ -39,12 +39,14 @@ public class Timer : MonoBehaviour
         if (GameState.Paused)
             return;
         style.normal.textColor = new Color(50, 0, 50);
+        style.fontSize = 22;
         var textArea = new Rect(630, 358, 300, 100);
         var minutes = timeLeft / 60;
         var seconds = timeLeft % 60;
-        var time = minutes + ":" + seconds;
-        if (seconds == 0)
+        var time = minutes + ":";
+        if (seconds / 10 == 0)
             time += "0";
+        time += seconds;
         GUI.Label(textArea, time, style);
     }
 }
