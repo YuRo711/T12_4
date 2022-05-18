@@ -6,14 +6,14 @@ namespace Game
 {
     public class PauseMenuButton : MonoBehaviour
     {
-        public string name;
+        public string buttonName;
         private void OnMouseDown()
         {
-            if (name == "exit")
+            if (buttonName == "exit")
                 Application.Quit();
-            else if (name == "settings")
+            else if (buttonName == "settings")
                 SceneManager.LoadScene("settings");
-            else if (name == "continue")
+            else if (buttonName == "continue")
                 SceneManager.LoadScene(GameState.LastScene);
         }
     }

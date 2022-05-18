@@ -8,6 +8,7 @@ namespace Game
         {
             new List<Customer>
             {
+                new Customer("Sprites/Characters/Milly", "Milly"),
                 new Customer("Sprites/Characters/Harold", "Harold"),
                 new Customer("Sprites/Characters/Abigaile", "Abigaile"),
                 new Customer("Sprites/Characters/Tyler", "Tyler")

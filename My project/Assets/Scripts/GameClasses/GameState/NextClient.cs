@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Clients;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -26,6 +28,16 @@ namespace Game
             client.GetComponent<DialogueWindow>().talked = false;
             client.GetComponent<ClientSprite>().Appear();
             client.GetComponent<ClientSprite>().appeared = false;
+
+            if (CurrentCustomer.Name == "Robber")
+                GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Отдать деньги";
+            else
+                GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Готово";
+            
+            if (CurrentCustomer.Name == "Cultist")
+                GameObject.Find("Music").GetComponent<AudioSource>().mute = true;
+            else
+                GameObject.Find("Music").GetComponent<AudioSource>().mute = false;
         }
     }
 }

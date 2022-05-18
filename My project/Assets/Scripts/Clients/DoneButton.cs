@@ -1,4 +1,5 @@
-﻿using Game;
+﻿using System;
+using Game;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
@@ -8,10 +9,11 @@ namespace Clients
     {
         public void Clicked()
         {
+            var dialogueWindow = GameObject.Find("Client").GetComponent<DialogueWindow>();
+            if (dialogueWindow.talking)
+                return;
             GameState.Paused = true;
             var canvas = GameObject.Find("Canvas");
-            if (GameObject.Find("Client").GetComponent<DialogueWindow>().talking)
-                return;
             var stars = GameState.PlayerOrder.Stars;
             GameState.Score += stars;
             for (int i = 0; i < stars; i++)

@@ -33,19 +33,37 @@ namespace Clients
                 "Tyler", new CustomerOrder(
                     attributes: new List<Attribute>
                         {new Attribute(AttributeTypes.Service, null, "Плакальщицы", 25)},
-                deadlines: Tuple.Create(13, 20),
-                placeName: "Центральное кладбище",
-                ritual: RitualTypes.Funeral,
-                style: ContainerStyles.None)
+                    deadlines: Tuple.Create(13, 20),
+                    placeName: "Центральное кладбище",
+                    ritual: RitualTypes.Funeral,
+                    style: ContainerStyles.None)
             },
             {
-                "Raven", new CustomerOrder()
+                "Raven", new CustomerOrder(
+                    deadlines: Tuple.Create(0, 0),
+                    placeName: "none",
+                    ritual: RitualTypes.Funeral,
+                    style: ContainerStyles.Soft)
             },
             {
                 "Robber", new CustomerOrder()
             },
             {
-                "Milly", new CustomerOrder()
+                "Milly", new CustomerOrder(
+                    ritual: RitualTypes.Funeral,
+                    style: ContainerStyles.Tiny,
+                    placeName: "none",
+                    deadlines: Tuple.Create(0, 0)
+                )
+            },
+            {
+                "Cultist", new CustomerOrder(
+                    attributes: new List<Attribute>
+                        {new Attribute(AttributeTypes.Service, null, "Плакальщицы", 25)},
+                    deadlines: Tuple.Create(13, 20),
+                    placeName: "Центральное кладбище",
+                    ritual: RitualTypes.Funeral,
+                    style: ContainerStyles.None)
             }
         };
     }

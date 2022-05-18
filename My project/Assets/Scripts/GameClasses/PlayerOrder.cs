@@ -13,13 +13,15 @@ namespace Game
         {
 			Day = 0;
 			Month = 0;
-			Place = new Place(PlaceTypes.None);
+			Place = new Place(PlaceTypes.None, "none");
 			Coffin = new Container(ContainerTypes.None);
 			Urn = new Container(ContainerTypes.None);
 			Attributes = new List<Attribute>();
 			customerOrder = customer.Order;
+			CustomerName = customer.Name;
         }
 
+		public string CustomerName { get; set; }
 		public int Day { get; set; }
 		public int Month { get; set; }
 		public Place Place { get; set; }
@@ -34,6 +36,10 @@ namespace Game
 		{
 			get
 			{
+				if (CustomerName == "Milly")
+					return (Stars == 3) ? 1 : 0;
+				if (CustomerName == "Robber")
+					return -100;
 				var selfCost = Coffin.Price + Place.Price + servicesCost;
 				return (int)(Score * profitCoefficient * selfCost);
 			}
@@ -73,7 +79,7 @@ namespace Game
             get
             {
 				var customerAttributes = customerOrder.PreferredAttributes;
-				if (customerAttributes.Count == 0)
+				if (customerAttributes == null)
 					return 1;
 				var singleAttributeScore = (double)1 / customerAttributes.Count;
 				double score = 0;

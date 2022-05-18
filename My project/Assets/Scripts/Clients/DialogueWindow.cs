@@ -25,7 +25,6 @@ class DialogueWindow : MonoBehaviour
         canvas = GameObject.Find("Canvas");
         currentText = "";
     }
-
     // Нажатие на клиента
     private void OnMouseDown()
     {
