@@ -10,7 +10,10 @@ namespace Clients
         {
             if (GameState.CurrentCustomer.Name != "Cop")
                 return;
-            Debug.Log("Call");
+            
+            GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("PoliceSirens");
+            GameObject.Find("Music").GetComponent<AudioSource>().Play();
+            
             GetComponent<ClientSprite>().appeared = false;
             GetComponent<ClientSprite>().Appear();
             

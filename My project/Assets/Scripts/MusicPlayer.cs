@@ -14,6 +14,9 @@ namespace DefaultNamespace
                 exists = true;
             else
                 Destroy(gameObject);
+            GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("MainTheme");
+            GetComponent<AudioSource>().enabled = true;
+            GetComponent<AudioSource>().Play();
         }
     }
 }

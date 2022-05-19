@@ -20,6 +20,13 @@ namespace Game
                 SceneManager.LoadScene("results");
                 return;
             }
+
+            if (CurrentCustomer.Name == "Cop" || CurrentCustomer.Name == "Cultist" || CurrentCustomer.Name == "Robber")
+            {
+                GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("MainTheme");
+                GameObject.Find("Music").GetComponent<AudioSource>().Play();
+            }
+
             CurrentCustomer = CustomersToday[ServedClientsToday];
             PlayerOrder = new PlayerOrder(CurrentCustomer);
             var client = GameObject.Find("Client");
@@ -41,9 +48,10 @@ namespace Game
             }
             
             if (CurrentCustomer.Name == "Cultist" || CurrentCustomer.Name == "Robber")
-                GameObject.Find("Music").GetComponent<AudioSource>().mute = true;
-            else
-                GameObject.Find("Music").GetComponent<AudioSource>().mute = false;
+            {
+                GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Danger");
+                GameObject.Find("Music").GetComponent<AudioSource>().Play();
+            }
         }
     }
 }
