@@ -40,15 +40,7 @@ namespace Game
 				if (CustomerName == "Milly")
 					return (Stars == 3) ? 1 : 0;
 				if (CustomerName == "Robber")
-				{
-					if (GameState.Money <= 100)
-					{
-						SceneManager.LoadScene("game over");
-						GameState.LastScene = "game over";
-					}
-					else
-						return -100;
-				}
+					return -100;
 				var selfCost = Coffin.Price + Place.Price + servicesCost;
 				return (int)(Score * profitCoefficient * selfCost);
 			}
@@ -72,7 +64,7 @@ namespace Game
         {
             get
             {
-				return
+	            return
 					  0.25 * Convert.ToInt32(Place.IsMatch(customerOrder.Ritual)) + 0.12
 					+ 0.38 * containerScore
 					+ 0.18 * servicesScore

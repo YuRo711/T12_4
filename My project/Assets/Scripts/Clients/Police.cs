@@ -19,7 +19,7 @@ namespace Clients
             GetComponent<ClientSprite>().Appear();
             
             GetComponent<DialogueWindow>().talked = false;
-            if (GameState.CurrentCustomer.Criminal)
+            if (!GameState.FalseCall)
             {
                 Dialogues.OrderDict["Cop"] = new string[]
                 {

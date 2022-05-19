@@ -26,14 +26,15 @@ namespace Game
             List<Attribute> attributes;
             attributes = (category == AttributeTypes.Gravestone) ? GameState.Gravestones : GameState.Wreaths;;
             var y = 2.5f;
-            var x = -6.8f;
+            var x = -7f;
             var canvas = GameObject.Find("Canvas");
             foreach (Transform child in canvas.transform) {
                 Destroy(child.gameObject);
             }
-            for (var i = page * 3; i < Math.Min(page * 3 + 3, attributes.Count); i++)
+            for (var i = 0; i < 3; i++)
             {
                 var attribute = attributes[i];
+                Debug.Log(attribute.Name);
                 var sprite = Resources.Load<Sprite>(attribute.Image);
                 if (sprite != null)
                 {

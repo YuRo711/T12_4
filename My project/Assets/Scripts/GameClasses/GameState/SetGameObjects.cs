@@ -40,7 +40,7 @@ namespace Game
 			                "Sprites/coffin_7",
 			                "Комфорт",
 			                50,
-			                ContainerStyles.Rich),
+			                ContainerStyles.Comfort),
 		                
 		                new Container(
 			                ContainerTypes.Urn,
@@ -91,17 +91,17 @@ namespace Game
 			                AttributeTypes.Wreath,
 			                "Sprites/Венок",
 			                "Лилии",
-			                1),
+			                10),
 		                new Attribute(
 			                AttributeTypes.Wreath,
 			                "Sprites/Венок2",
 			                "Сердце",
-			                1),
+			                15),
 		                new Attribute(
 			                AttributeTypes.Wreath,
 			                "Sprites/Венок3",
 			                "Овальный",
-			                1)
+			                20)
 	                };
                 }
     }

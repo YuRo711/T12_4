@@ -27,7 +27,8 @@ namespace Game
         {
             SceneManager.LoadScene("main");
             GameState.LastScene = "main";
-            GameState.CurrentCustomer = new Customer("Sprites/Characters/Cop", "Cop");
+            GameState.FalseCall = !GameState.CurrentCustomer.Criminal;
+            GameState.CurrentCustomer = new Customer("Sprites/Characters/Cop", "Cop", "");
         }
     }
 }

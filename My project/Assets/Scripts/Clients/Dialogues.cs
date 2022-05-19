@@ -2,7 +2,7 @@
 
 namespace Clients
 {
-    public static partial class Dialogues
+    public static class Dialogues
     {
         public static Dictionary<string, string[]> OrderDict = new Dictionary<string, string[]>
         {
@@ -56,7 +56,7 @@ namespace Clients
                     "Но умирать я пока что не буду.",
                     "Я отмечаю день прихода в этот бренный мир.",
                     "Мне нужен <link=гроб><color=red>гроб</link></color>. Типа, крутой. " +
-                    "С <link=с крестом><color=red>крестом</link></color>, например.",
+                    "Но <link=удобный гроб><color=red>удобный</link></color>.",
                     "И можно венок, только не сильно яркий. <link=венок подешевле><color=red>Подешевле</link></color>.",
                     "Настоящие похороны <link=никаких похорон><color=red>не</link></color> " +
                     "<link=никаких похорон><color=red>нужны</link></color>, я и так мертва внутри."

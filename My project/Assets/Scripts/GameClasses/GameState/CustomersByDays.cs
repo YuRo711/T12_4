@@ -9,9 +9,9 @@ namespace Game
             // Это для демонстрации
             new List<Customer>
             {
-                new Customer("Sprites/Characters/Raven", "Raven"),
+                new Customer("Sprites/Characters/Raven", "Raven", "6 sec female"),
                 new Customer("Sprites/Characters/Robber", "Robber", "", true),
-                new Customer("Sprites/Characters/Milly", "Milly"),
+                new Customer("Sprites/Characters/Milly", "Milly", "3 sec female")
             }
             
             /*

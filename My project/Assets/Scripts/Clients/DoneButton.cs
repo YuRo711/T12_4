@@ -11,6 +11,11 @@ namespace Clients
     {
         public void Clicked()
         {
+            if (GameState.Money <= 0)
+            {
+                SceneManager.LoadScene("game over");
+                GameState.LastScene = "game over";
+            }
             if (GameObject.Find("Timer").GetComponent<Timer>().timeLeft == 0)
             {
                 SceneManager.LoadScene("results");

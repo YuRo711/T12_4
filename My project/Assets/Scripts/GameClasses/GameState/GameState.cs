@@ -43,6 +43,7 @@ namespace Game
 		public static List<Attribute> Wreaths { get; set; }
 
 		public static string LastScene;
+		public static bool FalseCall;
 		
 		public static PlayerOrder PlayerOrder { get; set; }
 		public static List<Customer> Customers { get; set; }

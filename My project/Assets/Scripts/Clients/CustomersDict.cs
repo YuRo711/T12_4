@@ -43,7 +43,9 @@ namespace Clients
                     deadlines: Tuple.Create(0, 0),
                     placeName: "none",
                     ritual: RitualTypes.Funeral,
-                    style: ContainerStyles.Comfort)
+                    style: ContainerStyles.Comfort,
+                    attributes: new List<Attribute>
+                        { new Attribute(AttributeTypes.Wreath, null, "Лилии", 10) })
             },
             {
                 "Robber", new CustomerOrder()
