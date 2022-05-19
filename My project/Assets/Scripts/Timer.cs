@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public int timeLeft;
-    public int dayLength = 300;
+    public int dayLength;
     private GUIStyle style;
     private static bool exists;
+    private Color color;
+    private bool blink;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class Timer : MonoBehaviour
         timeLeft = dayLength;
         style = GUIStyle.none;
         style.font = Resources.Load<Font>("F77 Minecraft");
+        color = new Color(50, 0, 50);
         StartCoroutine(Tick());
     }
 
@@ -31,14 +34,22 @@ public class Timer : MonoBehaviour
                 timeLeft -= 1;
             yield return new WaitForSeconds(1f);
         }
-        SceneManager.LoadScene("results");
+
+        color = Color.red;
+        for (var i = 0; i < 3; i++)
+        {
+            blink = true;
+            yield return new WaitForSeconds(0.5f);
+            blink = false;
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     private void OnGUI()
     {
-        if (GameState.Paused)
+        if (GameState.Paused || blink)
             return;
-        style.normal.textColor = new Color(50, 0, 50);
+        style.normal.textColor = color;
         style.fontSize = 22;
         var textArea = new Rect(630, 358, 300, 100);
         var minutes = timeLeft / 60;

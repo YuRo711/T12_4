@@ -2,6 +2,7 @@
 using Game;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Clients
@@ -10,6 +11,11 @@ namespace Clients
     {
         public void Clicked()
         {
+            if (GameObject.Find("Timer").GetComponent<Timer>().timeLeft == 0)
+            {
+                SceneManager.LoadScene("results");
+                return;
+            }
             if (GameState.CurrentCustomer.Name == "Cop")
             {
                 GameState.NextClient();

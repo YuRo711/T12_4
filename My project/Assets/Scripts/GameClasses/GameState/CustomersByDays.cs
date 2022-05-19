@@ -6,6 +6,15 @@ namespace Game
     {
         private static List<List<Customer>> customersByDays = new List<List<Customer>>
         {
+            // Это для демонстрации
+            new List<Customer>
+            {
+                new Customer("Sprites/Characters/Raven", "Raven"),
+                new Customer("Sprites/Characters/Robber", "Robber", "", true),
+                new Customer("Sprites/Characters/Milly", "Milly"),
+            }
+            
+            /*
             new List<Customer>
             {
                 new Customer("Sprites/Characters/Arataki", "Arataki"),
@@ -30,6 +39,7 @@ namespace Game
                 //new Customer("Sprites/Characters/Старушка", "Старушка"),
                 new Customer("Sprites/Characters/Vampire", "Vampire")
             }
+            */
         };
     }
 }
