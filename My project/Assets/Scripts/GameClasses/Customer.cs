@@ -10,10 +10,11 @@ namespace Game
 {
     public class Customer
     {
-        public Customer(string sprite, string name = "Unnamed")
+        public Customer(string sprite, string name = "Unnamed", bool criminal = false)
         {
             Name = name;
             Sprite = sprite;
+            Criminal = criminal;
             Order = CustomersDict.Orders[name];
         }
 

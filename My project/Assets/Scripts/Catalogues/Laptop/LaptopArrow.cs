@@ -15,7 +15,9 @@ namespace Game
 
         private void Update()
         {
-            if (ui.page == 0 && next)
+            if (ui.page == 0 && !next)
+                gameObject.SetActive(false);
+            if (ui.page == 1 && next)
                 gameObject.SetActive(false);
         }
 

@@ -39,7 +39,7 @@ namespace Game
 				if (CustomerName == "Milly")
 					return (Stars == 3) ? 1 : 0;
 				if (CustomerName == "Robber")
-					return -100;
+					return Math.Max(-100, -GameState.Money);
 				var selfCost = Coffin.Price + Place.Price + servicesCost;
 				return (int)(Score * profitCoefficient * selfCost);
 			}

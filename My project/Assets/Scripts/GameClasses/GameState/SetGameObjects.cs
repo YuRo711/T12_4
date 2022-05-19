@@ -34,6 +34,12 @@ namespace Game
 			                "Sprites/coffin_4",
 			                "Саркофаг",
 			                80,
+			                ContainerStyles.Comfort),
+		                new Container(
+			                ContainerTypes.Coffin,
+			                "Sprites/coffin_7",
+			                "Комфорт",
+			                50,
 			                ContainerStyles.Rich),
 		                
 		                new Container(

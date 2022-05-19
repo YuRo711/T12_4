@@ -43,10 +43,13 @@ namespace Clients
                     deadlines: Tuple.Create(0, 0),
                     placeName: "none",
                     ritual: RitualTypes.Funeral,
-                    style: ContainerStyles.Soft)
+                    style: ContainerStyles.Comfort)
             },
             {
                 "Robber", new CustomerOrder()
+            },
+            {
+                "Cop", new CustomerOrder()
             },
             {
                 "Milly", new CustomerOrder(

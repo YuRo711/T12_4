@@ -2,6 +2,7 @@
 using Game;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Clients
 {
@@ -9,6 +10,12 @@ namespace Clients
     {
         public void Clicked()
         {
+            if (GameState.CurrentCustomer.Name == "Cop")
+            {
+                GameState.NextClient();
+                return;
+            }
+            
             var dialogueWindow = GameObject.Find("Client").GetComponent<DialogueWindow>();
             if (dialogueWindow.talking)
                 return;

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Clients;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -23,18 +25,9 @@ namespace Game
 
         private void OnMouseDown()
         {
-            if (GameState.CurrentCustomer.Criminal)
-                Arrest();
-            else
-            {
-                Debug.Log("False call!");
-                GameState.Money -= 30;
-            }
-        }
-
-        private void Arrest()
-        {
-            Debug.Log("Criminal arrested!");
+            SceneManager.LoadScene("main");
+            GameState.LastScene = "main";
+            GameState.CurrentCustomer = new Customer("Sprites/Characters/Cop", "Cop");
         }
     }
 }

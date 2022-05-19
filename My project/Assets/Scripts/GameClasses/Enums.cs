@@ -19,7 +19,7 @@ namespace Game
 		Classic,
 		Cross,
 		Tiny,
-		Soft,
+		Comfort,
 		Rich
 	}
 

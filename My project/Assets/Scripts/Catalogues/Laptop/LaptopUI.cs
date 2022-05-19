@@ -35,7 +35,7 @@ namespace Game
             }
             var x = -4.7f;
             var y = 3.5f;
-            var i = 0;
+            var i = page * 3;
             var count = 0;
             while (count < 3 && i < containers.Count)
             {

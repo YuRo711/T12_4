@@ -30,11 +30,17 @@ namespace Game
             client.GetComponent<ClientSprite>().appeared = false;
 
             if (CurrentCustomer.Name == "Robber")
-                GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Отдать деньги";
+            {
+                GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Гнать бабки";
+                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1.3f, 1);
+            }
             else
+            {
                 GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Готово";
+                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1, 1);
+            }
             
-            if (CurrentCustomer.Name == "Cultist")
+            if (CurrentCustomer.Name == "Cultist" || CurrentCustomer.Name == "Robber")
                 GameObject.Find("Music").GetComponent<AudioSource>().mute = true;
             else
                 GameObject.Find("Music").GetComponent<AudioSource>().mute = false;
