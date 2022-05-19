@@ -14,7 +14,8 @@ namespace Clients
             if (GameState.Money <= 0)
             {
                 SceneManager.LoadScene("game over");
-                GameState.LastScene = "game over";
+                GameState.Paused = true;
+                return;
             }
             if (GameObject.Find("Timer").GetComponent<Timer>().timeLeft == 0)
             {

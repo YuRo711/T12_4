@@ -7,10 +7,13 @@ namespace UI
 {
     public class ReplayButton : MonoBehaviour
     {
-        private void OnMouseDown()
+        public void Replay()
         {
+            GameState.Money = GameState.StartMoney;
+            GameState.ServedClientsToday = 0;
             SceneManager.LoadScene("main");
-            GameState.NextClient();
+            GameState.CurrentCustomer = GameState.CustomersToday[0];
+            GameState.Paused = false;
         }
     }
 }

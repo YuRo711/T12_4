@@ -39,7 +39,7 @@ namespace Game
             if (CurrentCustomer.Name == "Robber")
             {
                 GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Гнать бабки";
-                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1.3f, 1);
+                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1.4f, 1);
             }
             else
             {

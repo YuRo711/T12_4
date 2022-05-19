@@ -7,11 +7,20 @@ namespace UI
 {
     public class NextDayButton : MonoBehaviour
     {
-        private void OnMouseDown()
+        public void Click()
         {
+            if (GameState.Money <= 0)
+            {
+                SceneManager.LoadScene("game over");
+                return;
+            }
+            var timer = GameObject.Find("Timer").GetComponent<Timer>();
+            timer.timeLeft = timer.dayLength;
+            GameState.ServedClientsToday = 0;
             GameState.Day++;
             SceneManager.LoadScene("main");
-            GameState.NextClient();
+            GameState.CustomersToday = GameState.customersByDays[GameState.Day];
+            GameState.CurrentCustomer = GameState.CustomersToday[0];
         }
     }
 }

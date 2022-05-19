@@ -4,7 +4,7 @@ namespace Game
 {
     public static partial class GameState
     {
-        private static List<List<Customer>> customersByDays = new List<List<Customer>>
+        public static List<List<Customer>> customersByDays = new List<List<Customer>>
         {
             // Это для демонстрации
             new List<Customer>
@@ -12,6 +12,10 @@ namespace Game
                 new Customer("Sprites/Characters/Raven", "Raven", "6 sec female"),
                 new Customer("Sprites/Characters/Robber", "Robber", "", true),
                 new Customer("Sprites/Characters/Milly", "Milly", "3 sec female")
+            },
+            new List<Customer>
+            {
+                new Customer("Sprites/Characters/Harold", "Harold"),
             }
             
             /*

@@ -45,7 +45,7 @@ namespace Clients
                     ritual: RitualTypes.Funeral,
                     style: ContainerStyles.Comfort,
                     attributes: new List<Attribute>
-                        { new Attribute(AttributeTypes.Wreath, null, "Лилии", 10) })
+                        { new Attribute(AttributeTypes.Wreath, "Sprites/Венок", "Лилии", 10) })
             },
             {
                 "Robber", new CustomerOrder()

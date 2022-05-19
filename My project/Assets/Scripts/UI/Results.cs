@@ -11,6 +11,7 @@ namespace DefaultNamespace
 
         private void Start()
         {
+            GameState.Money -= 100;
             style = GUIStyle.none;
             style.fontSize = 22;
             style.font = Resources.Load<Font>("F77 Minecraft");
@@ -31,7 +32,17 @@ namespace DefaultNamespace
             text += "$";
             GUI.Label(textArea, text, style);
             
-            textArea = new Rect(200, 200, 300, 100);
+            textArea = new Rect(200, 180, 300, 100);
+            text = "(-100$ на аренду офиса)";
+            GUI.Label(textArea, text, style);
+            
+            textArea = new Rect(200, 220, 300, 100);
+            text = "Всего денег: ";
+            text += GameState.Money;
+            text += "$";
+            GUI.Label(textArea, text, style);
+            
+            textArea = new Rect(200, 270, 300, 100);
             text = "Звёзд получено: ";
             text += GameState.Score + "/" + 3 * GameState.CustomersToday.Count;
             GUI.Label(textArea, text, style);
