@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Game;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Clients
 {
@@ -34,8 +35,11 @@ namespace Clients
                     "Ложный вызов. Вы оштрафованы на 50$"
                 };
                 GameState.Money -= 50;
-                if (GameState.Money < 0)
-                    GameState.GameOver();
+                if (GameState.Money <= 0)
+                {
+                    SceneManager.LoadScene("game over");
+                    GameState.LastScene = "game over";
+                }
             }
         }
     }

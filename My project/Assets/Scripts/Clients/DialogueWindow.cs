@@ -33,6 +33,8 @@ class DialogueWindow : MonoBehaviour
         foreach (var phrase in Dialogues.OrderDict[GameState.CurrentCustomer.Name])
             gameObject.GetComponent<DialogueWindow>().dialogueQueue.Add(phrase);
         talking = true;
+        GameObject.Find("Voice").GetComponent<AudioSource>().clip = GameState.CurrentCustomer.Voice;
+        GameObject.Find("Voice").GetComponent<AudioSource>().Play();
     }
 
     private void Update()

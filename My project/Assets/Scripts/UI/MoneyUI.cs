@@ -20,7 +20,8 @@ namespace Game
             {
                 exists = true;
                 GameState.Restart();
-                if (SceneManager.GetActiveScene().name == "menu" || SceneManager.GetActiveScene().name == "results")
+                if (SceneManager.GetActiveScene().name == "menu" || SceneManager.GetActiveScene().name == "results"
+                                                                 || SceneManager.GetActiveScene().name == "game over")
                     gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 else
                     gameObject.GetComponent<SpriteRenderer>().enabled = true;

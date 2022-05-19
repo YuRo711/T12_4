@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -39,7 +40,15 @@ namespace Game
 				if (CustomerName == "Milly")
 					return (Stars == 3) ? 1 : 0;
 				if (CustomerName == "Robber")
-					return Math.Max(-100, -GameState.Money);
+				{
+					if (GameState.Money <= 100)
+					{
+						SceneManager.LoadScene("game over");
+						GameState.LastScene = "game over";
+					}
+					else
+						return -100;
+				}
 				var selfCost = Coffin.Price + Place.Price + servicesCost;
 				return (int)(Score * profitCoefficient * selfCost);
 			}

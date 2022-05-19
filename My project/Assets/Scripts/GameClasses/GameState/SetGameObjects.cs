@@ -90,17 +90,17 @@ namespace Game
 		                new Attribute(
 			                AttributeTypes.Wreath,
 			                "Sprites/Венок",
-			                "1",
+			                "Лилии",
 			                1),
 		                new Attribute(
 			                AttributeTypes.Wreath,
 			                "Sprites/Венок2",
-			                "1",
+			                "Сердце",
 			                1),
 		                new Attribute(
 			                AttributeTypes.Wreath,
 			                "Sprites/Венок3",
-			                "1",
+			                "Овальный",
 			                1)
 	                };
                 }

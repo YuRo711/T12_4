@@ -74,7 +74,6 @@
      <Compile Include="Assets\Scripts\Catalogues\Phone\PhoneKey.cs" />
      <Compile Include="Assets\Scripts\UI\MatchesCoffin.cs" />
      <Compile Include="Assets\Scripts\GameClasses\GameState\SetGameObjects.cs" />
-     <Compile Include="Assets\Scripts\GameClasses\GameState\GameOver.cs" />
      <Compile Include="Assets\Scripts\Clients\DoneButton.cs" />
      <Compile Include="Assets\Scripts\Clients\Dialogues.cs" />
      <Compile Include="Assets\Scripts\UI\StarsButton.cs" />
@@ -101,6 +100,7 @@
      <Compile Include="Assets\Scripts\Catalogues\Catalogue\CataloguePage.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Container.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Place.cs" />
+     <Compile Include="Assets\Scripts\UI\ReplayButton.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
