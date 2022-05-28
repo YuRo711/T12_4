@@ -1,4 +1,6 @@
 ﻿using System;
+using DefaultNamespace;
+using Game;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +13,10 @@ namespace UI
 
         private void Start()
         {
-            source = (isVoice)
-                ? GameObject.Find("Voices").GetComponent<AudioSource>()
-                : GameObject.Find("Music").GetComponent<AudioSource>();
-            GetComponent<Slider>().value = source.volume;
+            if (isVoice)
+                VoicePlayer.voiceVolume = source.volume;
+            else
+                GameObject.Find("Music").GetComponent<AudioSource>().volume = source.volume;
         }
 
         public void ChangeVolume()

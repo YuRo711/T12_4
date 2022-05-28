@@ -34,12 +34,12 @@ namespace Game
             client.GetComponent<Animator>().Play(CurrentCustomer.Name, 0, 0);
             client.GetComponent<DialogueWindow>().talked = false;
             client.GetComponent<ClientSprite>().Appear();
-            client.GetComponent<ClientSprite>().appeared = false;
+            ClientSprite.Appeared = false;
 
             if (CurrentCustomer.Name == "Robber")
             {
                 GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Гнать бабки";
-                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1.4f, 1);
+                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1, 1);
             }
             else
             {

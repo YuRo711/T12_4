@@ -15,7 +15,7 @@ namespace Clients
             GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("PoliceSirens");
             GameObject.Find("Music").GetComponent<AudioSource>().Play();
             
-            GetComponent<ClientSprite>().appeared = false;
+            ClientSprite.Appeared = false;
             GetComponent<ClientSprite>().Appear();
             
             GetComponent<DialogueWindow>().talked = false;
@@ -27,6 +27,7 @@ namespace Clients
                     "Вам полагается вознаграждение в 100$"
                 };
                 GameState.Money += 100;
+                GameState.Score += 3;
             }
             else
             {

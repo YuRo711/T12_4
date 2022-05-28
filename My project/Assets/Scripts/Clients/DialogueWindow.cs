@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using Clients;
 using Game;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 class DialogueWindow : MonoBehaviour

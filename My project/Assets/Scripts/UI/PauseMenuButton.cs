@@ -7,7 +7,7 @@ namespace Game
     public class PauseMenuButton : MonoBehaviour
     {
         public string buttonName;
-        private void OnMouseDown()
+        public void Click()
         {
             if (buttonName == "exit")
                 Application.Quit();

@@ -35,9 +35,9 @@ namespace Game
             if (GameState.Paused)
                 return;
             style.normal.textColor = Color.black;
-            style.fontSize = 19;
+            style.fontSize = 52;
             money = GameState.Money;
-            var textArea = new Rect(230,362, 300, 100);
+            var textArea = new Rect(380,1005, 300, 100);
             GUI.Label(textArea, money.ToString(), style);
         }
     }

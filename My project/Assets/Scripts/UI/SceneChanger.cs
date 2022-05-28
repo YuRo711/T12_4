@@ -16,4 +16,9 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene(target);
         GameState.LastScene = target;
     }
+
+    public void BackToPause()
+    {
+        SceneManager.LoadScene("menu");
+    }
 }

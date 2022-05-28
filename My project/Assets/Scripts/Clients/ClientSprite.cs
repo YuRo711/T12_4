@@ -8,18 +8,19 @@ namespace Clients
     public class ClientSprite : MonoBehaviour
     {
         private SpriteRenderer spriteRenderer;
-        public bool appeared;
+        public static bool Appeared;
 
         private void Start()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            Appear();
+            if (!Appeared)
+                Appear();
         }
 
         public void Appear()
         {
             StartCoroutine(ChangeColor());
-            appeared = true;
+            Appeared = true;
         }
 
         private IEnumerator ChangeColor()

@@ -42,6 +42,7 @@ namespace Game
                     image.GetComponent<Image>().sprite = sprite;
                     image.transform.position = new Vector3(x, y, 0);
                     image.transform.localScale = new Vector3(0.8f, 0.8f, 1);
+                    image.GetComponent<Image>().color = new Color(255, 246, 255);
                 }
 
                 var contName = (GameObject)Instantiate(Resources.Load("ShopText"), canvas.transform);
