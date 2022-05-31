@@ -52,6 +52,13 @@ namespace Game
                 GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Danger");
                 GameObject.Find("Music").GetComponent<AudioSource>().Play();
             }
+
+            if (CurrentCustomer.Name == "Oswald" && OswaldCaught)
+            {
+                CustomersToday.Remove(new Customer("Sprites/Characters/Oswald", "Sus 3", "", true));
+                ServedClientsToday--;
+                NextClient();
+            }
         }
     }
 }

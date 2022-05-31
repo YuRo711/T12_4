@@ -20,7 +20,9 @@ namespace Game
 		Cross,
 		Tiny,
 		Comfort,
-		Rich
+		Rich,
+		Flag,
+		Color
 	}
 
 	public enum AttributeTypes

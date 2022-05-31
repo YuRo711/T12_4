@@ -26,7 +26,7 @@ namespace Clients
             {
                 var star = (GameObject)Instantiate(Resources.Load("Star"), canvas.transform);
                 star.transform.position = new Vector3(-3f + i * 3f,0,0);
-                star.transform.localScale = new Vector3(10, 10, 10);
+                star.transform.localScale = new Vector3(30, 30, 1);
             }
             for (int i = stars; i < 3; i++)
             {

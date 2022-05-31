@@ -34,13 +34,25 @@ namespace Game
 			                "Sprites/coffin_4",
 			                "Саркофаг",
 			                80,
-			                ContainerStyles.Comfort),
+			                ContainerStyles.Rich),
 		                new Container(
 			                ContainerTypes.Coffin,
 			                "Sprites/coffin_7",
 			                "Комфорт",
 			                50,
 			                ContainerStyles.Comfort),
+		                new Container(
+			                ContainerTypes.Coffin,
+			                "Sprites/coffin_8",
+			                "Патриотический",
+			                30,
+			                ContainerStyles.Flag),
+		                new Container(
+			                ContainerTypes.Coffin,
+			                "Sprites/coffin_9",
+			                "[Error 404]",
+			                80,
+			                ContainerStyles.Color),
 		                
 		                new Container(
 			                ContainerTypes.Urn,
@@ -51,7 +63,8 @@ namespace Game
 			                ContainerTypes.Urn,
 			                "Sprites/urn_3",
 			                "Яркая",
-			                15),
+			                15,
+			                ContainerStyles.Color),
 		                new Container(
 			                ContainerTypes.Urn,
 			                "Sprites/urn_2",

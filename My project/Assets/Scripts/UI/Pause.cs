@@ -18,8 +18,8 @@ public class Pause : MonoBehaviour
     
     private void OnMouseDown()
     {
-        gameObject.SetActive(false);
         GameState.Paused = true;
         SceneManager.LoadScene("menu");
+        gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
     }
 }

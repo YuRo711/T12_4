@@ -14,14 +14,20 @@ namespace UI
         private void Start()
         {
             if (isVoice)
-                VoicePlayer.voiceVolume = source.volume;
+                GetComponent<Slider>().value = VoicePlayer.voiceVolume;
             else
-                GameObject.Find("Music").GetComponent<AudioSource>().volume = source.volume;
+            {
+                source = GameObject.Find("Music").GetComponent<AudioSource>();
+                GetComponent<Slider>().value = source.volume;
+            }
         }
 
         public void ChangeVolume()
         {
-            source.volume = GetComponent<Slider>().value;
+            if (isVoice)
+                VoicePlayer.voiceVolume = GetComponent<Slider>().value;
+            else
+                source.volume = GetComponent<Slider>().value;
         }
     }
 }

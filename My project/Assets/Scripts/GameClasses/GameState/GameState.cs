@@ -43,6 +43,8 @@ namespace Game
 
 		public static string LastScene;
 		public static bool FalseCall;
+		public static bool OswaldCaught;
+		public static bool MatchesGone;
 		
 		public static PlayerOrder PlayerOrder { get; set; }
 		public static List<Customer> Customers { get; set; }
