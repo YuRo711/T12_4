@@ -20,7 +20,7 @@ namespace Game
 			timer.timeLeft = timer.dayLength;
 			StartMoney = money;
 			Money = money;
-			Day = 1;
+			Day = 0;
 			ServedClientsToday = 0;
 			ServedClientsTotal = 0;
 			SetGameObjects();
@@ -32,6 +32,7 @@ namespace Game
 		
 		public static int StartMoney { get; set; }
 		public static int Money { get; set; }
+		public static int TotalMoney { get; set; }
 		public static int Day { get; set; }
 		public static Customer CurrentCustomer { get; set; }
 		public static int ServedClientsToday { get; set; }
@@ -46,8 +47,8 @@ namespace Game
 		public static bool MatchesGone;
 		
 		public static PlayerOrder PlayerOrder { get; set; }
-		public static List<Customer> Customers { get; set; }
 		public static int Score { get; set; }
+		public static int TotalScore { get; set; }
 
 		public static List<string> Tasks { get; set; }
 
