@@ -56,10 +56,13 @@ class DialogueWindow : MonoBehaviour
             yield return new WaitForSeconds(wordPause * words.Length);
             Dialogues.OrderDict[GameState.CurrentCustomer.Name].Remove(line);
         }
+        if (!Dialogues.OrderDict[GameState.CurrentCustomer.Name].Any())
+            StopTalking();
     }
 
     private IEnumerator TextUpdate(string[] line)
     {
+        gameObject.GetComponent<Animator>().speed = 1;
         currentText = "";
         foreach (var word in line)
         {
@@ -69,14 +72,13 @@ class DialogueWindow : MonoBehaviour
             popup.GetComponentInChildren<TMP_Text>().text = currentText;
             yield return new WaitForSeconds(wordPause);
             Destroy(popup, 3.02f);
-            Invoke(nameof(StopTalking), wordPause);
             talked = true;
             currentText += " ";
         }
         yield return new WaitForSeconds(wordPause + 0.2f);
     }
 
-    private void StopTalking()
+    void StopTalking()
     {
         talking = false;
         gameObject.GetComponent<Animator>().speed = 0;

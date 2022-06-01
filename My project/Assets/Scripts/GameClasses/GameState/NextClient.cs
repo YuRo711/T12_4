@@ -42,19 +42,11 @@ namespace Game
             else
             {
                 GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Готово";
-                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1, 1);
             }
             if (CurrentCustomer.Name == "Cultist" || CurrentCustomer.Name == "Robber")
             {
                 GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Danger");
                 GameObject.Find("Music").GetComponent<AudioSource>().Play();
-            }
-
-            if (CurrentCustomer.Name == "Oswald" && OswaldCaught)
-            {
-                CustomersToday.Remove(new Customer("Sprites/Characters/Oswald", "Oswald", "", true));
-                ServedClientsToday--;
-                NextClient();
             }
         }
     }

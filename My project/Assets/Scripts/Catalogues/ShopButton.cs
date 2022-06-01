@@ -10,12 +10,13 @@ using Attribute = Game.Attribute;
 public class ShopButton : MonoBehaviour
 {
     public IPreference Preference;
+    public IPreference ChosenPref;
 
     public void Buy()
     {
-        if (GameState.Money >= Preference.Price)
-            GameState.Money -= Preference.Price;
-
+        if (GameState.Money < Preference.Price)
+            return;
+        GameState.Money -= Preference.Price;
         if (Preference is Container container)
             if (container.Type == ContainerTypes.Coffin)
                 GameState.PlayerOrder.Coffin = container;
