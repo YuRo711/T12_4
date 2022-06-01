@@ -13,6 +13,7 @@ namespace UI
             GameState.ServedClientsToday = 0;
             SceneManager.LoadScene("main");
             GameState.CurrentCustomer = GameState.CustomersToday[0];
+            GameState.PlayerOrder = new PlayerOrder(GameState.CurrentCustomer);
             GameState.Paused = false;
         }
     }

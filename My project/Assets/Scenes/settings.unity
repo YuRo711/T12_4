@@ -1750,8 +1750,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2016023085}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: BackToPause
+        m_TargetAssemblyTypeName: Game.PauseMenuButton, Assembly-CSharp
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1808,10 +1808,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2016023080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2602a63a2fb1a6a40a82281a4339444d, type: 3}
+  m_Script: {fileID: 11500000, guid: 122103e488364f7195b074da58abe0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: 
+  buttonName: back
 --- !u!1 &2140007676
 GameObject:
   m_ObjectHideFlags: 0

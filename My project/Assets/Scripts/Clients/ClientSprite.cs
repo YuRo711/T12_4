@@ -19,6 +19,8 @@ namespace Clients
 
         public void Appear()
         {
+            Destroy(GetComponent<PolygonCollider2D>());
+            gameObject.AddComponent<PolygonCollider2D>();
             StartCoroutine(ChangeColor());
             Appeared = true;
         }

@@ -1,11 +1,12 @@
 ﻿using System;
+using Game;
 using UnityEngine;
 
 namespace DefaultNamespace
 {
     public class MusicPlayer : MonoBehaviour
     {
-        private static bool exists;
+        public static bool exists;
 
         private void Start()
         {
@@ -14,7 +15,9 @@ namespace DefaultNamespace
                 exists = true;
             else
                 Destroy(gameObject);
-            GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("MainTheme");
+            GetComponent<AudioSource>().clip = (GameStarted.Started) ? 
+                Resources.Load<AudioClip>("MainTheme") :
+                Resources.Load<AudioClip>("MementoMori");
             GetComponent<AudioSource>().enabled = true;
             GetComponent<AudioSource>().Play();
         }

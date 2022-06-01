@@ -14,7 +14,7 @@ namespace Clients
                     "Думаю, он был бы рад, если бы мы так и сделали.",
                     "Однако с практической точки зрения",
                     "идея <color=red><link=кремация>кремации</link></color> всегда привлекала его больше.",
-                    "Если можно, назначьте прощание на <color=red><link=08.05>7</link></color> <color=red><link=08.05>мая</link></color>.",
+                    "Если можно, назначьте прощание на <color=red><link=08.05>8</link></color> <color=red><link=08.05>мая</link></color>.",
                     "Если это важно, он <color=red><link=не религиозен>не</link></color> " +
                     "<color=red><link=не религиозен>был</link></color> <color=red><link=не религиозен>религиозен</link></color>."
                 } 
@@ -131,6 +131,8 @@ namespace Clients
                     "Пусть гроб её будет подобен мягкой <link=гроб с обивкой?><color=red>постели</link></color>, ",
                     "Пусть каждый цветок в траурном <link=венок><color=red>венке</link></color> " +
                     "выражает мою бессмертную <link=выражение любви><color=red>любовь</link></color>.",
+                    "Время же <link=дата незначительна><color=red>не</link></color> <link=дата незначительна><color=red>имеет</link></color> " +
+                    "<link=дата незначительна><color=red>смысла</link></color>, уже поздно.",
                     "Увы, я вынужден избегать <link=без крестов и церквей><color=red>крестов</link></color> " +
                     "<link=без крестов и церквей><color=red>и</link></color> <link=без крестов и церквей><color=red>церквей</link></color>.",
                     "Правда ли, что ныне можно обойтись без них?",

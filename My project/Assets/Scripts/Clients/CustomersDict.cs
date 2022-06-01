@@ -12,7 +12,7 @@ namespace Clients
             {
                 "Abigaile", new CustomerOrder(
                     attributes: new List<Attribute>(),
-                    deadlines: Tuple.Create(7, 7),
+                    deadlines: Tuple.Create(8, 8),
                     placeName: "Крематорий",
                     ritual: RitualTypes.Cremation,
                     style: ContainerStyles.Rich)

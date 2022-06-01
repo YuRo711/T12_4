@@ -20,7 +20,7 @@ namespace Game
 			timer.timeLeft = timer.dayLength;
 			StartMoney = money;
 			Money = money;
-			Day = 0;
+			Day = 1;
 			ServedClientsToday = 0;
 			ServedClientsTotal = 0;
 			SetGameObjects();
@@ -28,7 +28,7 @@ namespace Game
 			CurrentCustomer = CustomersToday[0];
 			PlayerOrder = new PlayerOrder(CurrentCustomer);
 			LastScene = "main";
-        }
+		}
 		
 		public static int StartMoney { get; set; }
 		public static int Money { get; set; }
