@@ -9,7 +9,7 @@ namespace Game
     {
         public int money;
         private GUIStyle style;
-        private static bool exists;
+        public static bool exists;
 
         private void Start()
         {

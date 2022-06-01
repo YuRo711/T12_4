@@ -11,13 +11,12 @@ namespace Game
 {
 	public static partial class GameState
 	{
-		private static bool exists;
-		
 		// Создаётся в MoneyUI
 		public static void Restart(int money = 100)
 		{
-			var timer = GameObject.Find("Timer").GetComponent<Timer>();
-			timer.timeLeft = timer.dayLength;
+			var timer = GameObject.Find("Timer");
+			if (timer != null)
+				timer.GetComponent<Timer>().timeLeft = timer.GetComponent<Timer>().dayLength;
 			StartMoney = money;
 			Money = money;
 			Day = 0;

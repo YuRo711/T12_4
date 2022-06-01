@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Clients;
 using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -32,6 +33,7 @@ namespace UI
             SceneManager.LoadScene("main");
             GameState.CustomersToday = GameState.customersByDays[GameState.Day];
             GameState.CurrentCustomer = GameState.CustomersToday[0];
+            GameState.PlayerOrder = new PlayerOrder(GameState.CurrentCustomer);
         }
     }
 }

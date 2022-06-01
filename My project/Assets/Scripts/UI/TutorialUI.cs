@@ -25,6 +25,7 @@ namespace Game
         public void ToGame()
         {
             SceneManager.LoadScene("main");
+            GameState.Restart();
         }
     }
 }

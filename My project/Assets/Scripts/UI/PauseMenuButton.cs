@@ -38,8 +38,13 @@ namespace Game
             else if (buttonName == "new game")
             {
                 GameStarted.Started = true;
-                MusicPlayer.exists = false;
                 Destroy(GameObject.Find("Music"));
+                MusicPlayer.exists = false;
+                Destroy(GameObject.Find("Money UI"));
+                MoneyUI.exists = false;
+                Destroy(GameObject.Find("Timer"));
+                Timer.exists = false;
+                GameState.Paused = false;
                 SceneManager.LoadScene("tutorial");
             }
         }
