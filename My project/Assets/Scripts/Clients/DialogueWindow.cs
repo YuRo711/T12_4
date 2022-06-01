@@ -27,13 +27,15 @@ class DialogueWindow : MonoBehaviour
     // Нажатие на клиента
     private void OnMouseDown()
     {
-        if (talked)
+        if (talked || talking)
             return;
-        foreach (var phrase in Dialogues.OrderDict[GameState.CurrentCustomer.Name])
+        var queue = Dialogues.OrderDict[GameState.CurrentCustomer.Name];
+        foreach (var phrase in queue)
             gameObject.GetComponent<DialogueWindow>().dialogueQueue.Add(phrase);
         talking = true;
         GameObject.Find("Voice").GetComponent<AudioSource>().clip = GameState.CurrentCustomer.Voice;
         GameObject.Find("Voice").GetComponent<AudioSource>().Play();
+        gameObject.GetComponent<Animator>().speed = 1;
     }
 
     private void Update()
@@ -52,6 +54,7 @@ class DialogueWindow : MonoBehaviour
             var words = Regex.Split(line, @"\ (?![^<]*\>)");
             StartCoroutine(TextUpdate(words));
             yield return new WaitForSeconds(wordPause * words.Length);
+            Dialogues.OrderDict[GameState.CurrentCustomer.Name].Remove(line);
         }
     }
 
@@ -60,7 +63,6 @@ class DialogueWindow : MonoBehaviour
         currentText = "";
         foreach (var word in line)
         {
-            gameObject.GetComponent<Animator>().speed = 1;
             currentText += word;
             canvas = GameObject.Find("Canvas");
             var popup = (GameObject)Instantiate(Resources.Load("Popup"), canvas.transform);
@@ -71,7 +73,7 @@ class DialogueWindow : MonoBehaviour
             talked = true;
             currentText += " ";
         }
-        yield return new WaitForSeconds(wordPause);
+        yield return new WaitForSeconds(wordPause + 0.2f);
     }
 
     private void StopTalking()

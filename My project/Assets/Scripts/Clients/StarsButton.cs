@@ -7,6 +7,8 @@ namespace Game
     {
         public void PressOk()
         {
+            GameState.Score += GameState.PlayerOrder.Stars;
+            GameState.Money += GameState.PlayerOrder.Award;
             if (GameState.Money <= 0)
             {
                 SceneManager.LoadScene("game over");
@@ -23,8 +25,6 @@ namespace Game
                     Destroy(obj);
                 else
                     obj.color = Color.white;
-            GameState.Score += GameState.PlayerOrder.Stars;
-            GameState.Money += GameState.PlayerOrder.Award;
             GameState.NextClient();
             GameState.Paused = false;
             Destroy(gameObject);

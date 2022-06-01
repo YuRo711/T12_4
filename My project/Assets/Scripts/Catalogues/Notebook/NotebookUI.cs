@@ -30,8 +30,8 @@ namespace Game
             {
                 var line = (GameObject)Instantiate(Resources.Load("NotebookText"), canvas.transform);
                 line.GetComponent<TMP_Text>().text = task;
-                line.transform.position = new Vector3(0, y, 0);
-                y -= 0.8f;
+                line.transform.position = new Vector3(-5, y, 0);
+                y -= 1f;
             }
         }
     }

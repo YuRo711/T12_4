@@ -32,6 +32,36 @@ TextureImporter:
   - first:
       213: -4857506889528700772
     second: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_9"
+  - first:
+      213: 5680628408269558378
+    second: Abigaile_0
+  - first:
+      213: -5166852970345963267
+    second: Abigaile_1
+  - first:
+      213: -3055172569521450371
+    second: Abigaile_2
+  - first:
+      213: 435836368733693015
+    second: Abigaile_3
+  - first:
+      213: 8566217896217467299
+    second: Abigaile_4
+  - first:
+      213: 5623412074480000779
+    second: Abigaile_5
+  - first:
+      213: -3280443577230282901
+    second: Abigaile_6
+  - first:
+      213: -5677295774610829703
+    second: Abigaile_7
+  - first:
+      213: -5076600501745063853
+    second: Abigaile_8
+  - first:
+      213: 7748669395652840287
+    second: Abigaile_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_0"
+      name: Abigaile_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,41 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 629012aaca6dd27f0800000000000000
-      internalID: -635615935312361178
+      spriteID: a6256e7a075a5de40800000000000000
+      internalID: 5680628408269558378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_1"
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7917c993009221e70800000000000000
-      internalID: 9084368479303004567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_2"
+      name: Abigaile_1
       rect:
         serializedVersion: 2
         x: 256
-        y: 128
-        width: 128
-        height: 128
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,41 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 746fb1c989ca86370800000000000000
-      internalID: 8316086483393705543
+      spriteID: df06bdf3996ab48b0800000000000000
+      internalID: -5166852970345963267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_3"
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b49a01c654bc43790800000000000000
-      internalID: -7551187176167265973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_4"
+      name: Abigaile_2
       rect:
         serializedVersion: 2
         x: 512
-        y: 128
-        width: 128
-        height: 128
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +207,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a7e36f1d620dd590800000000000000
-      internalID: -7647953924503902304
+      spriteID: d72182a2cb8d995d0800000000000000
+      internalID: -3055172569521450371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_5"
+      name: Abigaile_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75461924ed66c0600800000000000000
+      internalID: 435836368733693015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abigaile_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9d2a47ac151e670800000000000000
+      internalID: 8566217896217467299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abigaile_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,41 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 534b7d9d83d76e4f0800000000000000
-      internalID: -799814200685251531
+      spriteID: b0fd505dc7f5a0e40800000000000000
+      internalID: 5623412074480000779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_6"
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6376455258c39da40800000000000000
-      internalID: 5393408571307484982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_7"
+      name: Abigaile_6
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,41 +291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2ee3a9f09b205da0800000000000000
-      internalID: -5958214405347611090
+      spriteID: b6f2a7172f58972d0800000000000000
+      internalID: -3280443577230282901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_8"
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c04399fc16192260800000000000000
-      internalID: 7073209003464147139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u042D\u0431\u0438\u0433\u0435\u0438\u0306\u043B \u0431\u0430\u0437\u0430_9"
+      name: Abigaile_7
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,8 +312,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9011ab583ba69cb0800000000000000
-      internalID: -4857506889528700772
+      spriteID: 97ece7592913631b0800000000000000
+      internalID: -5677295774610829703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abigaile_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3586aea9dba4c89b0800000000000000
+      internalID: -5076600501745063853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Abigaile_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b04d9d2cdc88b60800000000000000
+      internalID: 7748669395652840287
       vertices: []
       indices: 
       edges: []

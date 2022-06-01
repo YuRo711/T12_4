@@ -222,7 +222,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 141983486}
         m_TargetAssemblyTypeName: Game.PauseMenuButton, Assembly-CSharp
-        m_MethodName: Click
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -692,7 +692,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1350849222}
         m_TargetAssemblyTypeName: Game.PauseMenuButton, Assembly-CSharp
-        m_MethodName: Click
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1086,7 +1086,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2095334123}
         m_TargetAssemblyTypeName: Game.PauseMenuButton, Assembly-CSharp
-        m_MethodName: Click
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

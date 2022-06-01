@@ -11,12 +11,14 @@ namespace Game
         private SpriteRenderer spriteRenderer;
         private GameObject dateText;
         private PhoneOkButton OkButton;
+        private static int position;
 
         private void Start()
         {
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
             OkButton = GameObject.Find("OK").GetComponent<PhoneOkButton>();
             dateText = GameObject.Find("DateText");
+            position = 0;
         }
 
         private void OnMouseEnter()
@@ -33,18 +35,21 @@ namespace Game
         {
             if (number < 0)
                 return;
-            var len = dateText.GetComponent<Text>().text.Length;
-            if (len > 4)
+            var text = dateText.GetComponent<Text>().text.ToCharArray();
+            if (position > 4)
                 return;
-            if (len == 2)
+            if (position == 2)
+                position++;
+            text[position] = Char.Parse(number.ToString());
+            dateText.GetComponent<Text>().text = "";
+            foreach (var c in text)
+                dateText.GetComponent<Text>().text += c;
+            if (position == 4)
             {
-                OkButton.Day = int.Parse(dateText.GetComponent<Text>().text);
-                dateText.GetComponent<Text>().text += ".";
-            }
-            dateText.GetComponent<Text>().text += number;
-            if (len == 4)
+                OkButton.Day = int.Parse(dateText.GetComponent<Text>().text.Substring(0, 2));
                 OkButton.Month = int.Parse(dateText.GetComponent<Text>().text.Substring(3, 2));
-            
+            }
+            position++;
         }
     }
 }

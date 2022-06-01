@@ -20,6 +20,8 @@ public class Pause : MonoBehaviour
     {
         GameState.Paused = true;
         SceneManager.LoadScene("menu");
+        if (GameState.LastScene == null)
+            GameState.LastScene = "tutorial";
         gameObject.GetComponent<SpriteRenderer>().color = Color.clear;
     }
 }

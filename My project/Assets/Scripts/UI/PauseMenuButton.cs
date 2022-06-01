@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -8,7 +9,7 @@ namespace Game
     {
         public string buttonName;
 
-        public void Click()
+        public void OnMouseDown()
         {
             if (buttonName == "exit")
                 Application.Quit();
@@ -21,6 +22,10 @@ namespace Game
                 var uiRenderer = GameObject.Find("UI Pause").GetComponent<SpriteRenderer>();
                 uiRenderer.color = Color.white;
                 uiRenderer.sprite = uiRenderer.gameObject.GetComponent<ObjectActivation>().idleSprite;
+            }
+            else if (buttonName == "dark")
+            {
+                GameObject.Find("Text").GetComponent<Text>().text = "Ага, конечно";
             }
         }
     }

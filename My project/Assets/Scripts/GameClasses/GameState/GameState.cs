@@ -20,7 +20,7 @@ namespace Game
 			timer.timeLeft = timer.dayLength;
 			StartMoney = money;
 			Money = money;
-			Day = 1;
+			Day = 0;
 			ServedClientsToday = 0;
 			ServedClientsTotal = 0;
 			SetGameObjects();

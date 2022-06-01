@@ -10,9 +10,9 @@ public class Timer : MonoBehaviour
     public int timeLeft;
     public int dayLength;
     private GUIStyle style;
-    private static bool exists;
+    public static bool exists;
     private bool blink;
-    private Color color;
+    public Color color;
 
     private void Start()
     {

@@ -82,7 +82,6 @@
      <Compile Include="Assets\Scripts\UI\Results.cs" />
      <Compile Include="Assets\Scripts\Catalogues\Catalogue\CatalogueUI.cs" />
      <Compile Include="Assets\Scripts\Catalogues\Phone\PhoneCheckbox.cs" />
-     <Compile Include="Assets\Scripts\Catalogues\Notebook\NotebookClickable.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Attribute.cs" />
      <Compile Include="Assets\Scripts\GameClasses\CustomerOrder.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />

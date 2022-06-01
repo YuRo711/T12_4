@@ -4,9 +4,9 @@ namespace Clients
 {
     public static class Dialogues
     {
-        public static Dictionary<string, string[]> OrderDict = new Dictionary<string, string[]>
+        public static Dictionary<string, List<string>> OrderDict = new Dictionary<string, List<string>>
         {
-            { "Abigaile", new[]
+            { "Abigaile", new List<string>
                 {
                     "Мой друг-<color=red><link=египтолог>египтолог</link></color> шутил, что нам следует",
                     "устроить ему <color=red><link=королевские похороны>королевские</link></color>" +
@@ -14,12 +14,12 @@ namespace Clients
                     "Думаю, он был бы рад, если бы мы так и сделали.",
                     "Однако с практической точки зрения",
                     "идея <color=red><link=кремация>кремации</link></color> всегда привлекала его больше.",
-                    "Если можно, назначьте прощание на <color=red><link=7 мая>7</link></color> <color=red><link=7 мая>мая</link></color>.",
+                    "Если можно, назначьте прощание на <color=red><link=08.05>7</link></color> <color=red><link=08.05>мая</link></color>.",
                     "Если это важно, он <color=red><link=не религиозен>не</link></color> " +
                     "<color=red><link=не религиозен>был</link></color> <color=red><link=не религиозен>религиозен</link></color>."
                 } 
             },
-            { "Harold", new []
+            { "Harold", new List<string>
                 {
                     "Кхе-кхем... супруга моя почила на днях...",
                     "Боюсь только, как бы из могилы не встала...",
@@ -28,11 +28,11 @@ namespace Clients
                     "Вот кладбище бы где-нибудь у <color=red><link=церковь>церкви</link></color>, кхе-кхем...",
                     "<color=red><link=отпевание>Священника</link></color>, ясное дело...",
                     "Да <color=red><link=больше крестов>крестов</link></color> побольше, да...",
-                    "Три дня надо подождать, это, получается, <color=red><link=9 мая>9</link></color> " +
-                    "<color=red><link=9 мая>мая</link></color> будет, кхе-кхем..."
+                    "Три дня надо подождать, это, получается, <color=red><link=09.05>9</link></color> " +
+                    "<color=red><link=09.05>мая</link></color> будет, кхе-кхем..."
                 }
             },
-            { "Tyler", new []
+            { "Tyler", new List<string>
                 {
                     "Да, да, я - <link=тот самый???><color=red>тот самый</link></color>.",
                     "Никому не рассказывай и получишь неплохие деньги.",
@@ -49,10 +49,10 @@ namespace Clients
                     "А, <link=оркестр><color=red>оркестр</link></color>? Огонь, пусть мою музыку играют.",
                     "Надгробие ещё что ли? Давайте покруче, но <link=надгробие без крестов><color=red>без</link></color> " +
                     "<link=надгробие без крестов><color=red>крестов</link></color> всяких.",
-                    "Ну и устройте всё через <link=13-20 мая><color=red>недельку-две</link></color>."
+                    "Ну и устройте всё через <link=13.05-20.05><color=red>недельку-две</link></color>."
                 }
             },
-            {"Raven", new[]
+            {"Raven", new List<string>
                 {
                     "Моя мрачная душа жаждет смерти...",
                     "Но умирать я пока что не буду.",
@@ -64,12 +64,12 @@ namespace Clients
                     "<link=никаких похорон><color=red>нужны</link></color>, я и так мертва внутри."
                 }
             },
-            {"Robber", new[]
+            {"Robber", new List<string>
                 {
                     "Гони бабки!"
                 }
             },
-            {"Milly", new[]
+            {"Milly", new List<string>
                 {
                     "Я... У меня...",
                     "Хома умер... это <link=хомячок><color=red>хомячок</link></color>...",
@@ -77,38 +77,38 @@ namespace Clients
                     "Я слышала... вы похороны делаете..."
                 }
             },
-            {"Cultist", new[]
+            {"Cultist", new List<string>
                 {
                     "Ритуальные услуги?",
                     "Мне нужен р̈́и͂т͙у̝а̜л̺.",
                     "Жертва своя."
                 }
             },
-            {"Sus 1", new []
+            {"Sus 1", new List<string>
                 {
                     "Н-нужны похороны для моей... т-тётушки.",
                     "Н-ничего особенного, гроб <link=простой гроб><color=red>п-п-простой</link></color>, " +
                     "<link=простое кладбище><color=red>к-кладбище</link></color> тоже...",
                     "<link=подешевле><color=red>П-подешевле</link></color> и п-побыстрее.",
-                    "П-прямо завтра, <link=7 мая><color=red>7</link></color> <link=7 мая><color=red>мая</link></color>."
+                    "П-прямо завтра, <link=07.05><color=red>7</link></color> <link=07.05><color=red>мая</link></color>."
                 }
             },
-            {"Sus 2", new []
+            {"Sus 2", new List<string>
                 {
                     "У меня опять... д-другая т-тётушка...",
                     "Как в <link=простые похороны><color=red>п-прошлый</link></color> <link=простые похороны><color=red>раз</link></color>...",
                     "<link=подешевле><color=red>П-подешевле</link></color>... и з-завтра, " +
-                    "<link=8 мая><color=red>8</link></color> <link=8 мая><color=red>мая</link></color>."
+                    "<link=08.05><color=red>8</link></color> <link=08.05><color=red>мая</link></color>."
                 }
             },
-            {"Sus 3", new []
+            {"Sus 3", new List<string>
                 {
                     "Т-тётушка ещё не умерла...",
-                    "Но вы забронируйте п-похороны на <link=9 мая><color=red>9</link></color>...",
+                    "Но вы забронируйте п-похороны на <link=09.05><color=red>9</link></color>...",
                     "К-как обычно..."
                 }
             },
-            {"Evelyn", new []
+            {"Evelyn", new List<string>
                 {
                     "Внукам моим бестолковым даже собственные похороны не доверишь!",
                     "Приходится самой всё решать, в мои-то годы...",
@@ -124,7 +124,7 @@ namespace Clients
                     "Дожили, гроб себе сама выбираю. Эх, молодёжь..."
                 }
             },
-            {"Vampire", new []
+            {"Vampire", new List<string>
                 {
                     "Ах, любовь моя... Вместе с той, что отказалась от вечной жизни,",
                     "ушла и часть моего сердца... Прошу, проводите её достойно.",
@@ -137,22 +137,22 @@ namespace Clients
                 }
                 
             },
-            {"Arataki", new []
+            {"Arataki", new List<string>
                 {
                     "Мой отец вчера умер.",
                     "Он был человеком простым, но со вкусом. Хотел, чтобы его <link=кремация><color=red>кремировали</link></color>.",
                     "Нужен классический необитый <link=классический необитый гроб><color=red>гроб-трапеция</link></color> для церемонии,",
                     "а также <link=минимализм><color=red>минималистичная</link></color> урна.",
-                    "Будьте добры, назначьте церемонию на <link=8 мая><color=red>8</link></color> <link=8 мая><color=red>мая</link></color>.",
+                    "Будьте добры, назначьте церемонию на <link=08.05><color=red>8</link></color> <link=08.05><color=red>мая</link></color>.",
                     "Отпевания и прочего <link=без доп. услуг>не</link></color><link=без доп. услуг> надо</link></color>, " +
                     "помпезность была не в духе моего отца."
                 }
             },
-            {"Eagle", new []
+            {"Eagle", new List<string>
                 {
                     "Сегодня нас покинул храбрый слуга Родины.",
-                    "Операция под кодом 'похороны' назначена на <link=11 мая><color=red>11</link></color> " +
-                    "<link=11 мая><color=red>мая</link></color>.",
+                    "Операция под кодом 'похороны' назначена на <link=11.05><color=red>11</link></color> " +
+                    "<link=11.05><color=red>мая</link></color>.",
                     "Кладбище в <link=Центральное кладбище><color=red>центре</link></color> территории. " +
                     "Военный <link=оркестр><color=red>оркестр</link></color>.",
                     "Приказано заказать гроб, соответствующий <link=патриотический гроб><color=red>патриотическому</link></color> духу мероприятия,",
@@ -161,16 +161,16 @@ namespace Clients
                     "Напалм... в глаз попал..."
                 }
             },
-            {"Michel", new []
+            {"Michel", new List<string>
                 {
                     "В нашьей country, Ghana, похороны is seen... slightly иначе.",
                     "Длья моего друга, bless his soul, мы хотьели бы заказать unusual похороны.",
                     "He was a пилот, so мы закажем гроб like <link=гроб в виде самолёта><color=red>самольёт</link></color>.",
                     "Also <link=оркестр><color=red>оркестр</link></color>, but no траурная музыка.",
                     "And the надгробие должно быть <link=заметное надгробие><color=red>замьетное</link></color>.",
-                    "Please, arrange всё в ближайшие <link=9-12 мая><color=red>3</link></color> <link=9-12 мая><color=red>днья</link></color>."
+                    "Please, arrange всё в ближайшие <link=9.05-12.05><color=red>3</link></color> <link=9.05-12.05><color=red>днья</link></color>."
                 }
-            },
+            }
         };
     }
 }

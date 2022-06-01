@@ -17,7 +17,7 @@ namespace Game
         {
             if (ui.page == 0 && !next)
                 gameObject.SetActive(false);
-            if (ui.page == 1 && next)
+            if (ui.page == 1 && next || ui.category == ContainerTypes.Urn)
                 gameObject.SetActive(false);
         }
 

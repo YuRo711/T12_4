@@ -14,17 +14,16 @@ namespace Game
         {
             ServedClientsToday++;
             Tasks = new List<string>();
+            if (CurrentCustomer.Name == "Cop" || CurrentCustomer.Name == "Cultist" || CurrentCustomer.Name == "Robber")
+            {
+                GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("MainTheme");
+                GameObject.Find("Music").GetComponent<AudioSource>().Play();
+            }
             if (CustomersToday.Count == ServedClientsToday)
             {
                 Paused = true;
                 SceneManager.LoadScene("results");
                 return;
-            }
-
-            if (CurrentCustomer.Name == "Cop" || CurrentCustomer.Name == "Cultist" || CurrentCustomer.Name == "Robber")
-            {
-                GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("MainTheme");
-                GameObject.Find("Music").GetComponent<AudioSource>().Play();
             }
 
             CurrentCustomer = CustomersToday[ServedClientsToday];
@@ -39,14 +38,12 @@ namespace Game
             if (CurrentCustomer.Name == "Robber")
             {
                 GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Гнать бабки";
-                GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1, 1);
             }
             else
             {
                 GameObject.Find("DoneButton").GetComponentInChildren<Text>().text = "Готово";
                 GameObject.Find("DoneButton").transform.localScale = new Vector3(1, 1, 1);
             }
-            
             if (CurrentCustomer.Name == "Cultist" || CurrentCustomer.Name == "Robber")
             {
                 GameObject.Find("Music").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Danger");
@@ -55,7 +52,7 @@ namespace Game
 
             if (CurrentCustomer.Name == "Oswald" && OswaldCaught)
             {
-                CustomersToday.Remove(new Customer("Sprites/Characters/Oswald", "Sus 3", "", true));
+                CustomersToday.Remove(new Customer("Sprites/Characters/Oswald", "Oswald", "", true));
                 ServedClientsToday--;
                 NextClient();
             }

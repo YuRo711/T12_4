@@ -41,12 +41,12 @@ public class ClickableText : MonoBehaviour, IPointerClickHandler
         var pos = moving.transform.position;
         var dx = (destination.x - pos.x) / 150;
         var dy = (destination.y - pos.y) / 150;
-        Destroy(moving, 1.8f);
         for (var i = 0; i < 150; i++)
         {
             pos = moving.transform.position;
             moving.transform.position = new Vector3(pos.x + dx, pos.y + dy, 0);
             yield return new WaitForSeconds(0.01f);
         }
+        Destroy(moving, 0.2f);
     }
 }

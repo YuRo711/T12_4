@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122103e488364f7195b074da58abe0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: exit
+  buttonName: dark
 --- !u!212 &813640056
 SpriteRenderer:
   m_ObjectHideFlags: 0

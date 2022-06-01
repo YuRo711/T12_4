@@ -21,7 +21,7 @@ namespace Clients
             GetComponent<DialogueWindow>().talked = false;
             if (!GameState.FalseCall)
             {
-                Dialogues.OrderDict["Cop"] = new string[]
+                Dialogues.OrderDict["Cop"] = new List<string>
                 {
                     "Благодарим за поимку опасного преступника!",
                     "Вам полагается вознаграждение в 100$"
@@ -31,7 +31,7 @@ namespace Clients
             }
             else
             {
-                Dialogues.OrderDict["Cop"] = new string[]
+                Dialogues.OrderDict["Cop"] = new List<string>
                 {
                     "Ложный вызов. Вы оштрафованы на 50$"
                 };

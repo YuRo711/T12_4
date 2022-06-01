@@ -9,7 +9,7 @@ namespace Game
                     Containers = GetContainers();
                     Gravestones = GetGravestones();
                     Wreaths = GetWreaths();
-                    CustomersToday = customersByDays[Day - 1];;
+                    CustomersToday = customersByDays[Day];;
                 }
         
                 //Add objects here
@@ -44,7 +44,7 @@ namespace Game
 		                new Container(
 			                ContainerTypes.Coffin,
 			                "Sprites/coffin_8",
-			                "Патриотический",
+			                "Патриот",
 			                30,
 			                ContainerStyles.Flag),
 		                new Container(
