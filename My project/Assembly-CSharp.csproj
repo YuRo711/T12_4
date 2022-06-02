@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\UI\Results.cs" />
      <Compile Include="Assets\Scripts\Catalogues\Catalogue\CatalogueUI.cs" />
      <Compile Include="Assets\Scripts\Catalogues\Phone\PhoneCheckbox.cs" />
+     <Compile Include="Assets\Scripts\GameClasses\GameState\GameStarted.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Attribute.cs" />
      <Compile Include="Assets\Scripts\GameClasses\CustomerOrder.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
@@ -101,7 +102,6 @@
      <Compile Include="Assets\Scripts\GameClasses\Container.cs" />
      <Compile Include="Assets\Scripts\GameClasses\Place.cs" />
      <Compile Include="Assets\Scripts\UI\ReplayButton.cs" />
-     <Compile Include="Assets\Scripts\GameClasses\GameState\GameStarted.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
